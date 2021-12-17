@@ -39,10 +39,23 @@ const show = async (req, res) => {
   }
 }
 
-
+const update = async (req, res) => {
+  try {
+    // const updateData = { thread: String }
+    const updatedPost = await Post.findByIdAndUpdate(
+      req.params.id,
+      // updateData,
+      { new: true }
+    )
+    return res.status(200).json(updatedPost)
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
 
 export {
-    create,
-    index,
-    show,
+  create,
+  index,
+	show,
+  update,
 }
