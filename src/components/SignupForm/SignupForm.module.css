@@ -1,9 +1,49 @@
+html {
+  min-height: 100vh;
+  background-color: #363230;
+}
+
+
+body {
+  background-color: #363230;;
+}
+
+main {
+  background-color: #363230;
+}
+
+label {
+  color: black;
+  
+}
+
+h1 {
+  color: white;
+}
+
+img {
+  height: 100px;
+  margin-bottom: 20px;
+
+}
+
+
 .container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  text-align: left;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 15px 40px;
+  margin-top: 6rem;
+}
+
+
+.container label {
+  display: flex;
 }
 
 .label,
