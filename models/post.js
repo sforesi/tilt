@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const postSchema = new Schema (
   {
-    text: String,
+    thread: String,
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Profile'
