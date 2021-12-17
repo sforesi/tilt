@@ -8,10 +8,12 @@ const gameSchema = new mongoose.Schema(
     releaseYear: Number,
     rating: Number,
     description: String,
-    reviews: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Review'
-    }
+    reviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review'
+      }
+    ]
   }
 )
 
