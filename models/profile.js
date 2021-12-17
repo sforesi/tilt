@@ -1,12 +1,21 @@
-import mongoose, { Collection } from 'mongoose'
+import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
 
 const collectionSchema = new Schema (
   {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: Collection,
+    category: {
+      type: String,
+      enum: ['favorites','watchList', 'played'],
+      default: 'favorited'
+    },
+    games: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Game',
+      }
+    ]
   }
 )
 
