@@ -21,7 +21,7 @@
 ### **Ice-Box Goals & Next Steps** 
 
 - [ ] AAU I want to make calls to a Youtube api so that I can see gameplay of the title in its details.
-- [ ] AAU I want to make calls to a Steam API so that I can purchase games on through them.
+- [ ] AAU I want to make calls to a steam API so that I can purchase games on through them.
 - [ ] AAU I want to be able to follow other users to see their rating, comments and favorite games.
 
 
