@@ -3,6 +3,10 @@ label {
   color: rgb(220, 217, 217);
 }
 
+.acc {
+  font-size: 37px;
+}
+
 .signup-page {
   display: grid;
 }
@@ -13,6 +17,7 @@ label {
   justify-content: center;
   align-items: center;
   color: white;
+  margin: 0 60px;
 }
 
 .right-container{
@@ -35,6 +40,7 @@ label {
   opacity: .5;
   margin: 14px 0px 32px 0px;
   font-weight: 600;
+  font-size: 25px;
 }
 
 .form-container {
