@@ -5,6 +5,7 @@ const gameSchema = new mongoose.Schema(
     title: String,
     coverArt: String,
     genre: String,
+    id: Number,
     releaseYear: Number,
     rating: Number,
     description: String,

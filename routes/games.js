@@ -6,6 +6,7 @@ const router = Router()
 
 // ========= Public Routes ========= 
 router.get('/', gameCtrl.index)
+router.get('/:id', gameCtrl.show)
 
 
 // ========= Protected Routes ========= 
