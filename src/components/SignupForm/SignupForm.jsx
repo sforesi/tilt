@@ -45,7 +45,6 @@ const SignupForm = props => {
       onSubmit={handleSubmit}
       className={styles.container}
     >
-      <img  src={tilt} alt="logo"></img>
       <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.label}>Name</label>
         <input
