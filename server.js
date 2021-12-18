@@ -26,9 +26,9 @@ app.use(logger('dev'))
 app.use(express.json())
 
 
+app.use('/api/games', gamesRouter)
 app.use('/api/posts', postsRouter)
 app.use('/api/auth', authRouter)
-app.use('/api/games', gamesRouter)
 
 app.get('/*', function (req, res) {
   res.sendFile(
