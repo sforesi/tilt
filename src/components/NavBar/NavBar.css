@@ -4,17 +4,21 @@ nav {
   justify-content: right;
   padding: 0px 15px 0px 15px;
   font-weight: 600;
+  background-color: black;
 
 }
 
 .navigation-bar {
   height: 50px;
   width: 100%;
+  border-bottom: 1px solid rgb(221, 217, 217);
 }
+
 
 .navigation-bar img {
   height: 40px;
 }
+
 
 
 img {
@@ -27,15 +31,11 @@ img:hover {
   border-bottom: none;
 }
 
-a:hover {
-  color: black;
-}
-
 .navigation-bar a {
   text-decoration: none;
   margin-right: 10px;
   padding: 6px 14px;
-  color: black;
+  color:rgb(221, 217, 217);
 }
 
 
