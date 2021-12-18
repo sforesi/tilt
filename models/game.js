@@ -1,20 +1,29 @@
 import mongoose from 'mongoose'
 
+const Schema = mongoose.Schema
+
+const reviewSchema = new Schema (
+  {
+    review: String,
+    author: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Profile'
+      }
+    ]
+  }
+)
+
 const gameSchema = new mongoose.Schema(
   {
     title: String,
     coverArt: String,
     genre: String,
-    id: Number,
+    rawg_id: Number,
     releaseYear: Number,
     rating: Number,
     description: String,
-    reviews: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Review'
-      }
-    ]
+    reviews: [reviewSchema]
   }
 )
 
