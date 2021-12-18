@@ -27,7 +27,6 @@ const profileSchema = new mongoose.Schema({
   },
   avatar: {
     type: String,
-    required: true
   },
   reviews: [
     {

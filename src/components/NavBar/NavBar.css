@@ -3,14 +3,39 @@ nav {
   align-items: center;
   justify-content: right;
   padding: 0px 15px 0px 15px;
-  border-bottom: 1px solid rgb(212, 212, 212);
+  font-weight: 600;
+
 }
 
 .navigation-bar {
-  height: 65px;
+  height: 50px;
+  width: 100%;
 }
 
 .navigation-bar img {
   height: 40px;
-  transform: translateY(8%)
 }
+
+
+img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+img:hover {
+  border-bottom: none;
+}
+
+a:hover {
+  color: black;
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 6px 14px;
+  color: black;
+}
+
+

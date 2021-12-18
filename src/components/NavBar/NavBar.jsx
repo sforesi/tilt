@@ -6,15 +6,15 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className='navigation-bar'>
-          <Link to="/"><img src="tilt.png" alt='logo'/></Link>
+          <Link to="/"><img id="logo"src="tilt.png" alt='logo'/></Link>
           <Link to="/">Home</Link>
           <Link to="/games">Games</Link>
           <Link to="/profiles">Collection</Link>
-          <Link to="" onClick={handleLogout}>LOG OUT</Link>
+          <Link to="" onClick={handleLogout}>Logout</Link>
         </nav>
       :
         <nav className='navigation-bar'>
-          <Link to="/"><img src="tilt.png" alt='logo'/></Link>
+          <Link to="/"><img id="logo" src="tilt.png" alt='logo'/></Link>
           <Link to="/">Home</Link>
           <Link to="/games">Games</Link>
           <Link to="/login">Log In</Link>
