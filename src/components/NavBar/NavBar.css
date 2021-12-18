@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0px 15px 0px 15px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.navigation-bar {
+  height: 65px;
+}
+
+.navigation-bar img {
+  height: 40px;
+  transform: translateY(8%)
+}
