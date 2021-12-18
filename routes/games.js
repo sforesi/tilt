@@ -11,6 +11,7 @@ router.get('/:id', gameCtrl.show)
 
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
+router.post('/:id', gameCtrl.createReview)
 
 
 export {
