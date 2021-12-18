@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
+import styles from './signup.css'
 import * as authService from '../../services/authService'
+
 
 import tilt from './images/tilt.png'
 
@@ -39,14 +40,27 @@ const SignupForm = props => {
     return !(name && email && password && password === passwordConf)
   }
 
+
+
+
+
   return (
-    <form
+
+    <div className='signup-page'>
+      <div className='left-container'>
+
+        <div className='form-container'>
+
+          <div className='title-container'>
+            <h1 className="acc">Create an Account</h1>
+            <h5>Social Network for Game Lovers</h5>
+          </div>
+
+          <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className="register-form"
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
         <input
           type="text"
           autoComplete="off"
@@ -54,10 +68,8 @@ const SignupForm = props => {
           value={name}
           name="name"
           onChange={handleChange}
+          placeholder='Username'
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
         <input
           type="text"
           autoComplete="off"
@@ -65,10 +77,8 @@ const SignupForm = props => {
           value={email}
           name="email"
           onChange={handleChange}
+          placeholder='Email'
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -76,12 +86,8 @@ const SignupForm = props => {
           value={password}
           name="password"
           onChange={handleChange}
+          placeholder='Password'
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
-          Confirm Password
-        </label>
         <input
           type="password"
           autoComplete="off"
@@ -89,17 +95,33 @@ const SignupForm = props => {
           value={passwordConf}
           name="passwordConf"
           onChange={handleChange}
+          placeholder='Confirm Password'
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+        <button 
+          autoComplete="off"
+        // disabled={isFormInvalid()} 
+          id='submit-button'
+          type='submit'
+          >
           Sign Up
         </button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
     </form>
+    <div className='redirect-container'>
+      <p>Already have an account?</p>
+      <Link className='redirect-link' to='/login'>Sign In</Link>
+    </div>
+      {/* form container */}
+      </div>
+    {/*leftcontainer end div*/}
+      </div>
+
+      <div className='right-container'>
+        <h1>HI PLAYERS</h1>
+      </div>
+
+      </div>
+
+
   )
 }
 
