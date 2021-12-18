@@ -12,6 +12,7 @@ import { router as authRouter } from './routes/auth.js'
 import { router as gamesRouter } from './routes/games.js'
 import { router as postsRouter } from './routes/posts.js'
 
+
 import('./config/database.js')
 
 const app = express()

@@ -9,7 +9,6 @@ const postSchema = new Schema (
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Profile'
     },
-    added_by: {type: mongoose.Schema.Types.ObjectId,ref: 'Profile'},
     date: {type: Date, default: Date.now}
   },
   { timestamps: true}
