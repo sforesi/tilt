@@ -1,13 +1,17 @@
+
 label {
   color: rgb(220, 217, 217);
+}
+
+.signup-page {
+  display: grid;
 }
 
 .left-container{
   width: 100%;
   margin: auto;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: white;
 }
 
@@ -24,18 +28,13 @@ label {
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
+  
 }
 
-.title-container h3 {
+.title-container h5 {
   opacity: .5;
   margin: 14px 0px 32px 0px;
   font-weight: 600;
-}
-
-.avatar-container{
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
 }
 
 .form-container {
@@ -45,14 +44,13 @@ label {
   align-items: center;
   max-width: 450px;
   font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-
 }
 
 .register-form {
   display: flex;
   flex-direction: column;
   width: 100%;
+  
 }
 
 .form-container input, select, button {
@@ -69,13 +67,13 @@ label {
 }
 
 #submit-button{
-  margin-top: 22px;
+  margin-top: 11px;
   border: none;
   color: white;
   font-weight: 600;
   border-radius: 10px;
   background-color: #42378f;
-  background-image: linear-gradient(315deg, #400468 0%, #79060d 74%);
+  background-image: linear-gradient(315deg, #400468 10%, #79060d 90%);
 
 }
 
@@ -86,10 +84,12 @@ label {
   font-weight: 500;
   opacity: .5;
   color: rgb(235, 235, 235);
+  margin-top: 10px;
 }
 
 .redirect-link{
-  color: #7450E9;
   text-decoration: none;
   padding-left: 6px;
+  align-items: flex-start;
+  margin-bottom: 16px;
 }

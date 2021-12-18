@@ -53,7 +53,7 @@ const SignupForm = props => {
 
           <div className='title-container'>
             <h1 className="acc">Create an Account</h1>
-            <h3>Social Network for Game Lovers</h3>
+            <h5>Social Network for Game Lovers</h5>
           </div>
 
           <form
@@ -108,7 +108,7 @@ const SignupForm = props => {
     </form>
     <div className='redirect-container'>
       <p>Already have an account?</p>
-      <Link className='redirecct-link' to='/login'>Sign In</Link>
+      <Link className='redirect-link' to='/login'>Sign In</Link>
     </div>
       {/* form container */}
       </div>
