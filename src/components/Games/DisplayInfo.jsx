@@ -1,15 +1,15 @@
 import React from 'react'
-
+import './DisplayInfo.css'
 const DisplayInfo = (props) => {
-  console.log(props.description)
+  console.log(props.game)
   return (
     <div className='game-detail'>
+      <img src={props.game.background_image} alt="background-img" />
       <h1>Game Details</h1>
-      <h3>Title</h3>
-      <h3>Release Year</h3>
-      <h3>Metacritic Rating</h3>
-      <h3>Developer</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantiums quos, sed corporis nobis alias amet explicabo eius cum repudiandae enim soluta asperiores eligendi. Est incidunt praesentium fugit provident harum aperiam!</p>
+      <h3>{props.game.name}</h3>
+      <h3>{props.game.released}</h3>
+      <h3>{props.game.developers[0].name}</h3>
+      {props.game.description_raw}
 
     </div>
   )
