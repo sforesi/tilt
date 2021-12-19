@@ -2,3 +2,11 @@ img{
   width: 100px;
   height: 100px;
 }
+
+.game-detail{
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
