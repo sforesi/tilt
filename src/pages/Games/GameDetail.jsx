@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import * as gameService from '../../services/gameService'
 
 // Components
-
+import DisplayInfo from '../../components/Games/DisplayInfo'
 
 const GameDetail = (props) => {
   const {rawg_id} = useParams()  
@@ -25,7 +25,9 @@ const GameDetail = (props) => {
 
   return (
     <div>
+      <DisplayInfo
       
+      />
     </div>
 
   )
