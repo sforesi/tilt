@@ -23,7 +23,8 @@ const gameSchema = new mongoose.Schema(
     releaseYear: Number,
     rating: Number,
     description: String,
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    collectedBy: [{ type: Schema.Types.ObjectId, ref: "Profile" }],
   }
 )
 
