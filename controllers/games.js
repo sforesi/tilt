@@ -15,6 +15,7 @@ const index = async (req, res) => {
 }
 
 const show = async (req, res) => {
+  console.log('SEE ME!', req.params.id)
   try {
     const BASE_URL = `https://api.rawg.io/api/games/${req.params.id}?key=${process.env.API_KEY}`
     const response = await axios.get(BASE_URL)
