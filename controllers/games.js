@@ -42,5 +42,5 @@ export {
 index,
 show,
 createReview,
-addReview,
+
 }
