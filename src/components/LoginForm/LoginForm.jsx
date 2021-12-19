@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './LoginForm.module.css'
 import * as authService from '../../services/authService'
 
 const LoginForm = props => {
@@ -27,40 +26,54 @@ const LoginForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.pw}
-          name="pw"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className={styles.button}>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
+  <div className='signup-page'>
+    <div className='left-container'>
+      <div className='form-container'>
+        <div className='title-container'>
+          <h1 className='acc'>Sign In</h1>
+          <h5>Social Network for Game Lovers</h5>
+        </div>
+        <form
+        onSubmit={handleSubmit}
+        className='register-form'
+        >
+          <input
+            type="text"
+            autoComplete="off"
+            id="email"
+            value={formData.email}
+            name="email"
+            onChange={handleChange}
+            placeholder='Email'
+          />
+          <input
+            type="password"
+            autoComplete="off"
+            id="password"
+            value={formData.pw}
+            name="pw"
+            onChange={handleChange}
+            placeholder='Password'
+          />
+            <button 
+              id='submit-button'
+              autoComplete="off"
+              type='submit'
+              >
+                Sign In
+              </button>
+        </form>
+        <div className='redirect-container'>
+        <p>Don't have an account?</p>
+        <Link className='redirect-link' to='/signup'>
+          Sign Up
         </Link>
       </div>
-    </form>
+    </div>
+  </div>
+  <div className='right-container'>
+  </div>
+</div>
   )
 }
 

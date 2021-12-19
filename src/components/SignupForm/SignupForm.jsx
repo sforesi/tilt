@@ -48,7 +48,6 @@ const SignupForm = props => {
 
     <div className='signup-page'>
       <div className='left-container'>
-
         <div className='form-container'>
 
           <div className='title-container'>
@@ -97,14 +96,13 @@ const SignupForm = props => {
           onChange={handleChange}
           placeholder='Confirm Password'
         />
-        <button 
-          autoComplete="off"
-        // disabled={isFormInvalid()} 
-          id='submit-button'
-          type='submit'
-          >
-          Sign Up
-        </button>
+          <button 
+            autoComplete="off"
+            id='submit-button'
+            type='submit'
+            >
+              Sign Up
+          </button>
     </form>
     <div className='redirect-container'>
       <p>Already have an account?</p>
@@ -116,7 +114,6 @@ const SignupForm = props => {
       </div>
 
       <div className='right-container'>
-        <h1>HI PLAYERS</h1>
       </div>
 
       </div>
