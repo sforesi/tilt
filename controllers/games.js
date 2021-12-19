@@ -38,11 +38,9 @@ const createReview = async (req, res) => {
   }
 
 
-
-
-
 export {
 index,
 show,
-createReview
+createReview,
+addReview,
 }
