@@ -14,6 +14,7 @@ export const getAllGames = async () => {
 
 
 export const getGame = async (rawg_id) => {
+  console.log(rawg_id)
   try {
     const res = await fetch(`${BASE_URL}${rawg_id}`)
     const data = await res.json()
