@@ -47,8 +47,28 @@ const createReview = async (req, res) => {
     }
   }
 
+  function addReview(req, res) {
+    req.body.collectedBy = req.user.profile
+    Game.findOne({ rawgId: req.params.id })
+    .then((game) => {
+      if (game) {
+        game.collectedBy.push(req.user.profile)
+        game.save()
+        .then(() => {
+          res.redirect(`/games/${req.params.id}`)
+        })
+      } else {
+        Game.create(req.body)
+        .then(()=> {
+          res.redirect(`/games/${req.params.id}`)
+        })
+      }
+    })
+  }
+  
 export {
 index,
 show,
-createReview
+createReview,
+addReview,
 }
