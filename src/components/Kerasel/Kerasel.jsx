@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import "./kerasel.css"
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -30,7 +30,7 @@ const responsive = {
 const Kerasel = ({genre}) => {
   
   const [games, setGames] = useState([])
-  
+  console.log("hi there are games", games)
 
   useEffect(() => {
     const getGenre = async () => {
@@ -42,12 +42,12 @@ const Kerasel = ({genre}) => {
 
 
 return (
-  <div>
+  <div className='keraselContainer'>
     <Carousel 
+    ssr
+    partialVisible
+    itemClass="image-item"
     responsive={responsive}
-    ssr={true}
-    draggable={true}
-    
     >
       {games.map((game) => (
         <GameShow 
