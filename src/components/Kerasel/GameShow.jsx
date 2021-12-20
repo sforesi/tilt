@@ -1,10 +1,14 @@
 import React from 'react'
 
-const game = (props, idx) => {
+function GameShow({ game }){
+console.log('gammemememememememe', game)
+
   return (
-    <div>
-    <img src={props.game.background_image} alt="game icon"/>
-    </div>
+    <>
+    <img src={game.background_image} alt='game' />
+    </>
+
   )
 }
-export default game
+
+export default GameShow

@@ -6,7 +6,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className='navigation-bar'>
-          <Link to="/"><img id="logo"src="tilt.png" alt='logo'/></Link>
+          <img id="logo"src="tilt.png" alt='logo'/>
           <Link to="/">Home</Link>
           <Link to="/games">Games</Link>
           <Link to="/profiles">Collection</Link>
@@ -14,7 +14,7 @@ const NavBar = ({ user, handleLogout }) => {
         </nav>
       :
         <nav className='navigation-bar'>
-          <Link to="/"><img id="logo" src="tilt.png" alt='logo'/></Link>
+          <img id="logo" src="tilt.png" alt='logo'/> 
           <Link to="/">Home</Link>
           <Link to="/games">Games</Link>
           <Link to="/login">Sign In</Link>

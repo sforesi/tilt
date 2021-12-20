@@ -25,6 +25,10 @@ const gameSchema = new mongoose.Schema(
     description: String,
     reviews: [reviewSchema],
     collectedBy: [{ type: Schema.Types.ObjectId, ref: "Profile" }],
+    // platforms: [],
+    metacritic: Number,
+    developer: String,
+
   }
 )
 

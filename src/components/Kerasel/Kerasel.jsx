@@ -45,13 +45,15 @@ return (
   <div>
     <Carousel 
     responsive={responsive}
-    ssr
+    ssr={true}
+    draggable={true}
     
     >
       {games.map((game) => (
         <GameShow 
+        game={game}
         key={game.id} 
-        game={game}/>
+        />
       ))}
     </Carousel>
   </div>
