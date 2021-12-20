@@ -13,7 +13,9 @@ router.get('/:id', gameCtrl.show)
 
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
-router.post('/:id/favCollection', gameCtrl.addToFavorites)
+router.post('/:id/collection/:category', gameCtrl.addToCollection)
+// router.post('/:id/playedCollection', gameCtrl.addToPlayed)
+// router.post('/:id/wishlistCollection', gameCtrl.addToWishlist)
 
 
 
