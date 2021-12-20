@@ -67,17 +67,47 @@ const addToFavorites = async(req, res) => {
 const addToPlayed = async(req, res) => {
   console.log(req.params.id)
   try {
-    
+    req.body.savedBy = req.user.profile
+    const playedGame = await Game.findById(req.params.id)
+    const profile = await Profile.findById(req.user.profile)
+    const played = profile.collections.find(col => col.category ==='played')
+    if (played) {
+      played.games.push(playedGame._id)
+      await profile.save()
+      return res.status(201).json(played)
+    } else {
+      profile.collections.push({category: 'played'})
+      await profile.save()
+      const newCollection = profile.collections[profile.collections.length -1]
+      newCollection.games.push(playedGame._id)
+      await profile.save()
+      return res.status(201).json(newCollection)
+    }
   } catch (err) {
     return res.status(500).json(err)
   }
 }
 
 
-const addToWatchlist = async(req, res) => {
+const addToWishlist = async(req, res) => {
   console.log(req.params.id)
   try {
-    
+    req.body.savedBy = req.user.profile
+    const wishGame = await Game.findById(req.params.id)
+    const profile = await Profile.findById(req.user.profile)
+    const wishlist = profile.collections.find(col => col.category ==='wishlist')
+    if (wishlist) {
+      wishlist.games.push(wishGame._id)
+      await profile.save()
+      return res.status(201).json(wishlist)
+    } else {
+      profile.collections.push({category: 'wishlist'})
+      await profile.save()
+      const newCollection = profile.collections[profile.collections.length -1]
+      newCollection.games.push(wishGame._id)
+      await profile.save()
+      return res.status(201).json(newCollection)
+    }
   } catch (err) {
     return res.status(500).json(err)
   }
@@ -102,6 +132,6 @@ export {
 index,
 show,
 addToFavorites,
-addToWatchlist,
+addToWishlist,
 addToPlayed
 }
