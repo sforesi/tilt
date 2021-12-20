@@ -5,7 +5,9 @@ import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 const router = Router()
 
 // ========= Public Routes ========= 
+
 router.get('/', gameCtrl.index)
+router.get('/games', gameCtrl.search)
 router.get('/:id', gameCtrl.show)
 
 
