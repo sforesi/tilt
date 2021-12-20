@@ -1,5 +1,5 @@
 html, main, nav {
-   background-color: rgb(32, 31, 31);
+  background-color: rgb(32, 31, 31);
 }
 
 html {
@@ -29,7 +29,7 @@ nav {
 
 
 img {
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   left: 0px;
 
