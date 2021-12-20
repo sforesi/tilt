@@ -27,6 +27,7 @@ const show = async (req, res) => {
       }
       return res.status(201).json(gameData)
     } else {
+      req.body.rawgId = req.params.id
       const createGame = await Game.create(req.body)
       const gameData = {
         game: createGame,
@@ -43,9 +44,9 @@ const addToFavorites = async(req, res) => {
   console.log(req.params.id)
   try {
     req.body.savedBy = req.user.profile
-    const favGame = Game.findOne({rawgId: req.params.id })
+    const favGame = await Game.findById(req.params.id)
     const profile = await Profile.findById(req.user.profile)
-    const favorites = profile.collections.find(col => col.category.equals('favorites'))
+    const favorites = profile.collections.find(col => col.category ==='favorites')
     if (favorites) {
       favorites.games.push(favGame._id)
       await profile.save()

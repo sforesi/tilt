@@ -13,7 +13,7 @@ const collectionSchema = new Schema (
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Game',
       }
-    ]
+    ],
   }
 )
 
