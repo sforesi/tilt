@@ -4,12 +4,14 @@ import Kerasel from "../../components/Kerasel/Kerasel"
 const Landing = () => {
   return (
     <div>
+      <h4>action</h4>
+      <Kerasel genre="action"/>
+      <h4>sports</h4>
       <Kerasel genre="sports"/>
-      <Kerasel genre="shooter"/>
-      {/* <Kerasel genre="role-playing-games-rpg"/>
+      <h4>strategy</h4>
       <Kerasel genre="strategy"/>
-      <Kerasel genre="adventure"/>
-      <Kerasel genre="puzzle"/> */}
+      <h4>RPG</h4>
+      <Kerasel genre="role-playing-games-rpg"/>
     </div>
   )
 }
