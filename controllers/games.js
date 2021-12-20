@@ -30,7 +30,7 @@ const show = async (req, res) => {
     const BASE_URL = `https://api.rawg.io/api/games/${req.params.id}?key=${process.env.API_KEY}`
     const response = await axios.get(BASE_URL)
     const game = await Game.findOne({ rawgId: req.params.id})
-    if(game){
+    if (game) {
       const gameData = {
         game: game,
         rawg: response.data,
@@ -51,14 +51,45 @@ const show = async (req, res) => {
 
 const addToFavorites = async(req, res) => {
   console.log(req.params.id)
+  try {
+    req.body.savedBy = req.user.profile
+    const favGame = Game.findOne({rawgId: req.params.id })
+    if (favGame) {
+      const favData = {
+        favorite: favGame,
+        rawg: response.data,
+      }
+      return res.status(201).json(favData)
+    } else {
+      const createGame = await Game.create(req.body)
+      const favData = {
+        favorite: createGame,
+        rawg: response.data,
+      }
+      return res.status(201).json(favData)
+    }
+  } catch (err) {
+    return res.status(500).json(err)
+  }
 }
 
 const addToPlayed = async(req, res) => {
   console.log(req.params.id)
+  try {
+    
+  } catch (err) {
+    return res.status(500).json(err)
+  }
 }
+
 
 const addToWatchlist = async(req, res) => {
   console.log(req.params.id)
+  try {
+    
+  } catch (err) {
+    return res.status(500).json(err)
+  }
 }
 
 
@@ -80,4 +111,7 @@ export {
 index,
 show,
 search,
+addToFavorites,
+addToWatchlist,
+addToPlayed
 }
