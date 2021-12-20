@@ -1,21 +1,21 @@
-// import React, { useState } from 'react'
-// import SearchCard from './SearchCard'
-// import * as rawgService  from '../../services/rawgService'
+import React, { useState } from 'react'
+import SearchCard from './SearchCard'
+import * as rawgService  from '../../services/rawgService'
 
-//   const Games= () => {
+  const Games= () => {
 
-//   const [games, setGames]= useState([])
+  const [games, setGames]= useState([])
 
-//   const searchGame = async (e) => {
+  const searchGame = async (e) => {
 
-//     e.preventDefault()
-//       try {
-//         const data = await rawgService.gamesGenre(e.target.value)
-//         setGames(data.results)
-//     } catch (error) {
-//       throw error
-//     }
-//   }
+    e.preventDefault()
+      try {
+        const data = await rawgService.gamesGenre(e.target.value)
+        setGames(data.results)
+    } catch (error) {
+      throw error
+    }
+  }
   
 //   return (
 //     <div>
