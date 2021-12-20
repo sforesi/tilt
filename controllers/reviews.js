@@ -7,7 +7,7 @@ const createReview = async (req, res) => {
     req.body.game = req.params.id
     req.body.author = req.user.profile
     const review = await Review.create(req.body)
-    const game = await Game.find({ rawgId: req.params.id })
+    const game = await Game.findById(req.params.id)
     game.reviews.push(review._id)
     await game.save()
     res.status(201).json(review)
