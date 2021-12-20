@@ -55,19 +55,10 @@ const addToFavorites = async(req, res) => {
     req.body.savedBy = req.user.profile
     const favGame = Game.findOne({rawgId: req.params.id })
     if (favGame) {
-      const favData = {
-        favorite: favGame,
-        rawg: response.data,
-      }
-      return res.status(201).json(favData)
-    } else {
-      const createGame = await Game.create(req.body)
-      const favData = {
-        favorite: createGame,
-        rawg: response.data,
-      }
-      return res.status(201).json(favData)
-    }
+      favGame.savedBy.push(req.user.profile)
+      await favGame.save()
+      return res.status(201).json(favGame)
+    }     
   } catch (err) {
     return res.status(500).json(err)
   }
