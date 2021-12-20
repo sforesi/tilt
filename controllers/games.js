@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const index = async (req, res) => {
   try {
-    const BASE_URL = `https://api.rawg.io/api/games?page_size=5&genres=${req.query.genre}&key=${process.env.API_KEY}`
+    const BASE_URL = `https://api.rawg.io/api/games?page_size=50&genres=${req.query.genre}&key=${process.env.API_KEY}`
     const response = await axios.get(BASE_URL)
     res.status(200).json(response.data)
   } catch (err) {

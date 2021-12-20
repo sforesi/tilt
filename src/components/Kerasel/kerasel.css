@@ -1,13 +1,9 @@
-.keraselContainer{
-  border: 1px solid red;
-}
+
 
 .gameCard{
-  border: 1px solid green;
-  height: 120px;
-  overflow: hidden;
-}
-.gameCard img{
-  object-fit:cover;
+  height: 125px;
   
 }
+
+
+
