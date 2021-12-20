@@ -6,6 +6,7 @@ const gameSchema = new mongoose.Schema(
   {
     rawgId: Number,
     reviews: [{type: Schema.Types.ObjectId, ref: "Review"}],
+    savedBy: [{type: Schema.Types.ObjectId, ref: "Profile"}]
   }
 )
 

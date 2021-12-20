@@ -58,6 +58,9 @@ const addToFavorites = async(req, res) => {
       favGame.savedBy.push(req.user.profile)
       await favGame.save()
       return res.status(201).json(favGame)
+    } else {
+      const createFavGame = await favGame.create(req.body)
+      return res.status(201).json(createFavGame)
     }     
   } catch (err) {
     return res.status(500).json(err)
