@@ -17,7 +17,20 @@ body{
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  padding: 10px;
+  border: 2px solid blue;
+  color: white;
 }
 
 
+.right-column{
+  padding: 10px;
+  border: 2px solid red;
+}
 
+.left-column{
+  padding: 10px;
+  border: 2 px solid green
+}
