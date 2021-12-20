@@ -17,38 +17,38 @@ import * as rawgService  from '../../services/rawgService'
     }
   }
   
-//   return (
-//     <div>
-//     <select name="games" onChange={searchGame}>
-//       <option value="shooter">select game</option>
-//       <option value="action">action</option>
-//       <option value="strategy">strategy</option>
-//       <option value="role-playing-games-rpg">shooter</option>
-//       <option value="board-games">board-games</option>
-//       <option value="sports">sports</option>
-//       <option value="casual">casual</option>
-//       <option value="simulation">simulation</option>
-//       <option value="puzzle">puzzle</option>
-//       <option value="arcade">arcade</option>
-//       <option value="platformer">platformer</option>
-//       <option value="racing">racing</option>
-//       <option value="massively-multiplayer">multiplayer</option>
-//       <option value="adventure">adventure</option>
-//       <option value="fighting">fightng</option>
-//       <option value="family">family</option>
-//       <option value="educational">educational</option>
-//       <option value="card">card</option>
-//       <option value="family">family</option>
-//       <option value="shooter">shooter</option>
-//     </select>
-//       {games.map((game)=>(
-//         <SearchCard
-//         game={game}
-//         key={game.id}
-//         />
-//       ))}
-//     </div>
-//   )
-// }
+  return (
+    <div>
+    <select name="games" onChange={searchGame}>
+      <option value="shooter">select game</option>
+      <option value="action">action</option>
+      <option value="strategy">strategy</option>
+      <option value="role-playing-games-rpg">shooter</option>
+      <option value="board-games">board-games</option>
+      <option value="sports">sports</option>
+      <option value="casual">casual</option>
+      <option value="simulation">simulation</option>
+      <option value="puzzle">puzzle</option>
+      <option value="arcade">arcade</option>
+      <option value="platformer">platformer</option>
+      <option value="racing">racing</option>
+      <option value="massively-multiplayer">multiplayer</option>
+      <option value="adventure">adventure</option>
+      <option value="fighting">fightng</option>
+      <option value="family">family</option>
+      <option value="educational">educational</option>
+      <option value="card">card</option>
+      <option value="family">family</option>
+      <option value="shooter">shooter</option>
+    </select>
+      {games.map((game)=>(
+        <SearchCard
+        game={game}
+        key={game.id}
+        />
+      ))}
+    </div>
+  )
+}
 
-// export default Games
+export default Games
