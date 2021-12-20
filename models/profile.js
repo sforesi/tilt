@@ -7,8 +7,6 @@ const collectionSchema = new Schema (
   {
     category: {
       type: String,
-      enum: ['favorites','watchList', 'played'],
-      default: 'favorited'
     },
     games: [
       {
