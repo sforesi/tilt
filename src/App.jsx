@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import GameDetail from './pages/Games/GameDetail'
+import GameSearch from './pages/Landing/GameSearch'
 import * as authService from './services/authService'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -44,6 +45,11 @@ const App = () => {
         <Route
           path="/games/:rawg_id"
           element={<GameDetail />}
+
+        />
+        <Route
+          path="/games"
+          element={<GameSearch />}
 
         />
       </Routes>
