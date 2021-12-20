@@ -1,19 +1,39 @@
 import { Profile } from '../models/profile.js'
 import { Review } from '../models/review.js'
+import {Game} from '../models/game.js'
 
 const createReview = async (req, res) => {
   try {
-    req.body.author = req.user.Profile
-    const review = await new Review(req.body)
-    await review.save()
-    await Profile.updateOne(
-      { _id: req.user.profile },
-        { $push: { reviews: review } }
-    )
-    return res.status(201).json(review)
-    } catch (err) {
-      return res.status(500).json(err)
-    }
+    req.body.game = req.params.id
+    req.body.author = req.user.profile
+    await Review.create(req.body)
+    .then((review) => {
+      Game.find({ rawgId: req.params.id })
+      .then((game) => {
+        game.reviews.push(review._id)
+        game.save()
+        .then(() => {
+          res.status(201).json(review)
+        })
+      })
+    })
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+
+    // const findGame = await Game.find({rawgId:req.params.id})
+    // Game.reviews.push(review._id)
+
+    // await Game.save()
+    // await review.save()
+    // await Profile.updateOne(
+    //   { _id: req.user.profile },
+    //     { $push: { reviews: review } }
+    // )
+    // return res.status(201).json(review)
+    // } catch (err) {
+    //   return res.status(500).json(err)
+    // }
   }
 
 

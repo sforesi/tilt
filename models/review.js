@@ -5,13 +5,22 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema (
   {
-    review: String,
+    content: String,
+    game: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Game'
+      }
+    ],
     author: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Profile'
       }
     ]
+  },
+  {
+    timestamps: true,
   }
 )
 
