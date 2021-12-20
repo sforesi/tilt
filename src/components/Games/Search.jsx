@@ -20,7 +20,7 @@ import * as rawgService  from '../../services/rawgService'
   return (
     <div>
     <select name="games" onChange={searchGame}>
-      <option value="shooter">select game</option>
+      <option value="shooter">select genre</option>
       <option value="action">action</option>
       <option value="strategy">strategy</option>
       <option value="role-playing-games-rpg">shooter</option>
