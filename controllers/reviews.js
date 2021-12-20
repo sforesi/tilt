@@ -6,21 +6,16 @@ const createReview = async (req, res) => {
   try {
     req.body.game = req.params.id
     req.body.author = req.user.profile
-    await Review.create(req.body)
-    .then((review) => {
-      Game.find({ rawgId: req.params.id })
-      .then((game) => {
-        game.reviews.push(review._id)
-        game.save()
-        .then(() => {
-          res.status(201).json(review)
-        })
-      })
-    })
+    const review = await Review.create(req.body)
+    const game = await Game.find({ rawgId: req.params.id })
+    game.reviews.push(review._id)
+    await game.save()
+    res.status(201).json(review)
+
   } catch (err) {
     return res.status(500).json(err)
   }
-
+}
     // const findGame = await Game.find({rawgId:req.params.id})
     // Game.reviews.push(review._id)
 
@@ -34,7 +29,7 @@ const createReview = async (req, res) => {
     // } catch (err) {
     //   return res.status(500).json(err)
     // }
-  }
+
 
 
   // const index = async (req, res) => {

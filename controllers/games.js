@@ -29,52 +29,42 @@ const show = async (req, res) => {
   try {
     const BASE_URL = `https://api.rawg.io/api/games/${req.params.id}?key=${process.env.API_KEY}`
     const response = await axios.get(BASE_URL)
-    res.status(200).json(response.data)
-  } catch (err) {
-    return res.status(500).json(err)
-  }
-}
-
-const  addToCollection = async (req, res) => {
-  try {
-    req.body.collectedBy = req.user.profile
     const game = await Game.findOne({ rawgId: req.params.id})
     if(game){
-      game.collectedBy.push(req.user.profile)
-      await game.save()
-      return res.status(201).json(game)
+      const gameData = {
+        game: game,
+        rawg: response.data,
+      }
+      return res.status(201).json(gameData)
     } else {
       const createGame = await Game.create(req.body)
-      return res.status(201).json(createGame)
+      const gameData = {
+        game: createGame,
+        rawg: response.data,
+      }
+      return res.status(201).json(gameData)
     }
   } catch (err) {
     return res.status(500).json(err)
   }
 }
-// function addToCollection(req, res) {
-//   req.body.collectedBy = req.user.profile
-//   Game.findOne({ rawgId: req.params.id })
-//   .then((game) => {
-//     if (game) {
-//       game.collectedBy.push(req.user.profile)
-//       game.save()
-//       .then(() => {
-//         res.status(200).json(response.data)
-//       })
+
+// const  saveToDatabase = async (req, res) => {
+//   try {
+//     const game = await Game.findOne({ rawgId: req.params.id})
+//     if(game){
+//       return res.status(201).json(game)
 //     } else {
-//       Game.create(req.body)
-//       .then(()=> {
-//         res.redirect(`/games/${req.params.id}`)
-//       })
+//       const createGame = await Game.create(req.body)
+//       return res.status(201).json(createGame)
 //     }
-//   })
+//   } catch (err) {
+//     return res.status(500).json(err)
+//   }
 // }
 
-
-  
 export {
 index,
 show,
-addToCollection,
 search,
 }
