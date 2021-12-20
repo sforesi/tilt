@@ -9,7 +9,7 @@ const Landing = () => {
       {/* <Kerasel genre="role-playing-games-rpg"/>
       <Kerasel genre="strategy"/>
       <Kerasel genre="adventure"/>
-      <Kerasel genre="puzzle"/> */}
+      <Kerasel genre="puzzle"/>  */}
     </div>
   )
 }

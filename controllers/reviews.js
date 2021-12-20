@@ -64,10 +64,10 @@ const createReview = async (req, res) => {
   //     return res.status(500).json(err)
   //   }
   // }
-  
+
   
   export {
-    createReview as create,
+    createReview,
     // index,
     // show,
     // update,

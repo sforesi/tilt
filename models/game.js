@@ -2,18 +2,6 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const reviewSchema = new Schema (
-  {
-    review: String,
-    author: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Profile'
-      }
-    ]
-  }
-)
-
 const gameSchema = new mongoose.Schema(
   {
     title: String,
@@ -23,10 +11,9 @@ const gameSchema = new mongoose.Schema(
     releaseYear: Number,
     rating: Number,
     description: String,
-    reviews: [reviewSchema],
+    reviews: [{type: Schema.Types.ObjectId, ref: "Review"}],
     collectedBy: [{ type: Schema.Types.ObjectId, ref: "Profile" }],
-    // platforms: [],
-    metacritic: Number,
+    platforms: [],
     developer: String,
 
   }
@@ -35,5 +22,5 @@ const gameSchema = new mongoose.Schema(
 const Game = mongoose.model('Game', gameSchema)
 
 export {
-  Game
+  Game,
 }
