@@ -49,6 +49,17 @@ const show = async (req, res) => {
   }
 }
 
+const addToFavorites = async(req, res) => {
+  console.log(req.params.id)
+}
+
+const addToPlayed = async(req, res) => {
+  console.log(req.params.id)
+}
+
+const addToWatchlist = async(req, res) => {
+  console.log(req.params.id)
+}
 
 
 // const  saveToDatabase = async (req, res) => {
