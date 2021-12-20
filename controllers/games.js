@@ -3,6 +3,16 @@ import { Game } from '../models/game.js'
 
 import axios from 'axios'
 
+// const rpg = 'role-playing-games-rpg'
+// // const action= 'action'
+// const strategy= 'strategy'
+// const shooter = 'shooter'
+// const sports = 'sports'
+// const indie = 'indie'
+
+
+const genre = "sports"
+// req.query
 
 const index = async (req, res) => {
   try {
@@ -38,10 +48,27 @@ const createReview = async (req, res) => {
     }
   }
 
-
+  function addReview(req, res) {
+    req.body.collectedBy = req.user.profile
+    Game.findOne({ rawgId: req.params.id })
+    .then((game) => {
+      if (game) {
+        game.collectedBy.push(req.user.profile)
+        game.save()
+        .then(() => {
+          res.redirect(`/games/${req.params.id}`)
+        })
+      } else {
+        Game.create(req.body)
+        .then(()=> {
+          res.redirect(`/games/${req.params.id}`)
+        })
+      }
+    })
+  }
+  
 export {
 index,
 show,
 createReview,
-
 }
