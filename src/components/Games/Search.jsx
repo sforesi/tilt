@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import SearchCard from './SearchCard'
 import * as rawgService  from '../../services/rawgService'
 
@@ -42,10 +43,11 @@ import * as rawgService  from '../../services/rawgService'
       <option value="shooter">shooter</option>
     </select>
       {games.map((game)=>(
-        <SearchCard
-        game={game}
-        key={game.id}
-        />
+        <Link to={`/games/${game.id}`}key={game.id}>
+          <SearchCard
+          game={game}
+          />
+        </Link>
       ))}
     </div>
   )
