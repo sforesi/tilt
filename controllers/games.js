@@ -14,11 +14,14 @@ const index = async (req, res) => {
   }
 }
 const search = async (req, res) => {
+  console.log(req.body.search)
   try {
-    const BASE_URL = `https://api.rawg.io/api/games?page_size=50&search=${req.params.id}&key=${process.env.API_KEY}`
+    const BASE_URL = `https://api.rawg.io/api/games?search=${req.body.search}&key=${process.env.API_KEY}`
     const response = await axios.get(BASE_URL)
     res.status(200).json(response.data)
+    console.log(response.data)
   } catch (err) {
+    console.log(err)
     return res.status(500).json(err)
   }
 }
