@@ -1,0 +1,25 @@
+
+.gameCard{
+  width: 330px;
+  height: 200px;
+  /* transition: transform 600ms; */
+  width: 97%;
+  border: 1px solid rgb(53, 50, 50);
+  overflow: hidden;
+  border-radius: 5px;
+
+}
+
+.gameCard img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:transform 600ms;
+  position: relative;
+}
+
+.gameCard img:hover{
+  transform: scale(1.2);
+}
+
+

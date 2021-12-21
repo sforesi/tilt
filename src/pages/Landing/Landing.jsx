@@ -1,5 +1,5 @@
 import React from 'react'
-import CreatePost from '../CreatePost/CreatePost'
+
 
 import Kerasel from "../../components/Kerasel/Kerasel"
 const Landing = () => {

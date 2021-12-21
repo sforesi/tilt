@@ -25,13 +25,13 @@ const GameDetail = (props) => {
   }, [rawg_id])
 
   return (
-    <div>
+    <>
       {game &&
       <DisplayInfo
       game={game}
       />
       }
-    </div>
+    </>
 
   )
 

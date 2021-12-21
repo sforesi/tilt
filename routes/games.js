@@ -8,12 +8,12 @@ const router = Router()
 
 router.get('/', gameCtrl.index)
 router.get('/:id', gameCtrl.show)
-router.get('/search', gameCtrl.search)
+router.post('/search', gameCtrl.search)
 
 
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
-router.post('/:id/collection/:category', gameCtrl.addToCollection)
+router.post('/:id/collection/:category',checkAuth, gameCtrl.addToCollection)
 
 
 

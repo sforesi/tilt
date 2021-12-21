@@ -1,0 +1,56 @@
+
+img {
+  width: 330px;
+  height: 225px;
+  border-radius: 2%;
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.game-image {
+  border: 1px solid rgb(53,50,50);
+}
+
+.game-image:hover{
+  transform: scale(1.1);
+}
+
+.wrapper {
+  margin: 10px;
+
+}
+
+.page-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+
+.games {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.games-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.drop-down {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+select {
+  border: 1px solid rgb(53, 50, 50);
+  border-radius: 3%;
+  background-color: rgb(27, 25, 25);
+  width: 200px;
+}
+/* -------------- */

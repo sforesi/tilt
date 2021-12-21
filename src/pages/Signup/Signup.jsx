@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import SignupForm from '../../components/SignupForm/SignupForm'
-import styles from './Signup.module.css'
+
 
 const Signup = props => {
   const [message, setMessage] = useState([''])
@@ -12,7 +12,7 @@ const Signup = props => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className='container'>
 
       <p>{message}</p>
       <SignupForm {...props} updateMessage={updateMessage} />

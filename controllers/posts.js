@@ -41,10 +41,10 @@ const show = async (req, res) => {
 
 const update = async (req, res) => {
   try {
-    // const updateData = { thread: String }
+    const updateData = { thread: `${req.body.text}` }
     const updatedPost = await Post.findByIdAndUpdate(
       req.params.id,
-      // updateData,
+      updateData,
       { new: true }
     )
     return res.status(200).json(updatedPost)
