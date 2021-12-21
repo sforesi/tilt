@@ -1,5 +1,8 @@
 html, main, nav {
-  background-color: rgb(32, 31, 31);
+  background: #0E0F14;
+  background: -webkit-linear-gradient(bottom, #0E0F14, #212730);
+  background: -moz-linear-gradient(bottom, #0E0F14, #212730);
+  background: linear-gradient(to top, #0E0F14, #212730);
 }
 
 html {
@@ -45,7 +48,7 @@ img:hover {
   text-decoration: none;
   margin-right: 10px;
   padding: 6px 14px;
-  color:rgb(221, 217, 217);
+  color:rgb(190, 190, 190);
 }
 
 

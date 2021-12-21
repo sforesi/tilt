@@ -66,7 +66,23 @@ body{
 
 .description{
   font-family: neue-haas-unica, sans-serif;
-  font-weight: 300;
+  font-weight: 900;
   font-style: normal;
   font-size: 16px;
+}
+
+.banner-image{
+  display: flex;
+  justify-content: center;
+  border: 2px solid pink;
+}
+
+#banner-image{
+  width: 900px;
+  box-shadow: inset 0 0 10px 10px black;
+}
+
+.container{
+  font-family: neue-haas-unica, sans-serif;
+
 }
