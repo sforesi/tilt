@@ -52,3 +52,11 @@ img:hover {
 }
 
 
+#logo{
+  width: 40px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 10;
+  margin: 10px;
+}
