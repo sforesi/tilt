@@ -35,10 +35,10 @@ body{
 }
 
 .image-container{
-  width: 400px;
+  width: 230px;
   /* border: 1px solid brown; */
   overflow: hidden;
-  height: 600px;
+  height: 340px;
   border: 1px solid rgb(190, 190, 190);
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 15px 0px #000000; 
@@ -75,14 +75,16 @@ body{
   display: flex;
   justify-content: center;
   border: 2px solid pink;
+  box-shadow: inset 0 0 10px 10px black;
 }
 
 #banner-image{
   width: 900px;
-  box-shadow: inset 0 0 10px 10px black;
+  object-fit: cover;
 }
 
 .container{
   font-family: neue-haas-unica, sans-serif;
 
 }
+
