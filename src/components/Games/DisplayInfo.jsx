@@ -22,13 +22,13 @@ const DisplayInfo = (props) => {
           </div>
           <div className="details">
             <p>{props.game.rawg.genres.map((g) => `${g.name} | `)}</p>
-            <p>{props.game.rawg.developers[0].name}</p>
+            <p>{props.game.rawg.developers[0].name}</p> 
             <p>{props.game.rawg.platforms.map((p) => `${p.platform.name} | `)}</p>
           </div>
         </div>
         <div className="right-column">
           <div className="header">
-            <p className="title">{props.game.rawg.name}</p>
+            <p className="title">{props.game.rawg.name} | </p>
             <p>{props.game.rawg.released}</p>
           </div>
           <p className="description">{props.game.rawg.description_raw}</p>
