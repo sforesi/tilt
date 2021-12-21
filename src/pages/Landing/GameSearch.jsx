@@ -1,10 +1,14 @@
 
 import React from 'react'
 import SearchGame from "../../components/Games/Search"
+import './GameSearch.css'
+
 const Search = () => {
   return (
-    <div>
-      <SearchGame genre="action"/>
+    <div className='all-games-container'>
+      <div className='games-dropdown'>
+        <SearchGame genre="action"/>
+      </div>
     </div>
   )
 }
