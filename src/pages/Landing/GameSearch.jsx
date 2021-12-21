@@ -1,7 +1,7 @@
 
 import React from 'react'
 import SearchGame from "../../components/Games/Search"
-import './GameSearch.css'
+import '../../styles/GameSearch.css'
 
 const Search = () => {
   return (
