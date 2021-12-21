@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './NavBar.css'
 
@@ -10,6 +11,10 @@ const NavBar = ({ user, handleLogout }) => {
           <Link to="/">HOME</Link>
           <Link to="/games">GAMES</Link>
           <Link to="/profiles">COLLECTION</Link>
+          
+          {/* New post? */}
+          {/* <Link to="/new">POSTS</Link> */}
+
           <Link to="" onClick={handleLogout}>SIGN OUT</Link>
         </nav>
       :
