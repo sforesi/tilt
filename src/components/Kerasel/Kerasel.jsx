@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./kerasel.css"
+import "../../styles/kerasel.css"
 
 
 const responsive = {
