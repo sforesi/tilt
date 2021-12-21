@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 // import '../../styles/Create.css'
-
+import Profile from '../Profiles/Profiles'
 // Components
 import PostForm from './PostForm'
-import Header from '../../components/misc/Header'
 
 //Services
 import { createPost } from '../../services/postService.js'
@@ -34,8 +33,8 @@ const CreatePost = (props) => {
   return (
     <div className="layout">
       <p>Post</p>
-    {/* <Header title='' /> */}
     <PostForm
+      // profile={profile}
       post={post}
       setPost={setPost}
       handleCreatePost={handleCreatePost}
