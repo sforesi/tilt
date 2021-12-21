@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import CreatePost from './pages/CreatePost/CreatePost'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
@@ -59,6 +60,9 @@ const App = () => {
         />
         <Route path='/posts'
           element={<PostList />}
+        />
+        <Route path='/new'
+        element={user ? <CreatePost user={user} /> : <Navigate to="/login" />}
         />
 
       </Routes>
