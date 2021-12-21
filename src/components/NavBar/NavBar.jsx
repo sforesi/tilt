@@ -13,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
           <Link to="/profiles">COLLECTION</Link>
           
           {/* New post? */}
-          <Link to="/new">POSTS</Link>
+          {/* <Link to="/new">POSTS</Link> */}
 
           <Link to="" onClick={handleLogout}>SIGN OUT</Link>
         </nav>

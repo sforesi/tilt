@@ -11,14 +11,13 @@ import { createPost } from '../../services/postService.js'
 
 const CreatePost = (props) => {
   const navigate = useNavigate()
-  const [toggleCode, setToggleCode] = useState(false)
-  const [question, setQuestion] = useState('')
-  const [codeblock, setCodeblock] = useState('')
+  const [post, setPost] = useState('')
 
   const formData = {
-    question: question, // question input
-    codeblock: codeblock, // codeblock input
-    added_by: props.user.profile, // who created the post
+    post: post, // question input
+
+    // error:
+    // added_by: props.user.profile, // who created the post
   }
 
   const handleCreatePost = async (e) => {
@@ -34,17 +33,11 @@ const CreatePost = (props) => {
 
   return (
     <div className="layout">
-    <Header title='Create Post' />
+      <p>Post</p>
+    {/* <Header title='' /> */}
     <PostForm
-      codeblock={codeblock}
-      setCodeblock={setCodeblock}
-
-      toggleCode={toggleCode}
-      setToggleCode={setToggleCode}
-
-      question={question}
-      setQuestion={setQuestion}
-
+      post={post}
+      setPost={setPost}
       handleCreatePost={handleCreatePost}
     />
   </div>

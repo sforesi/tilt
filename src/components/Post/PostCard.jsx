@@ -7,15 +7,10 @@ const PostCard = (props) => {
 
       <div className="card-header"></div>
 
-      <div className="question-container">
-        <p>{props.post.question}</p>
+      <div className="post-container">
+        <p>{props.post.post}</p>
       </div>
 
-      <div className="code-container">
-        <p>{props.post.codeblock}</p>
-      </div>
-
-      <div className="comment-link"></div>
 
     </div>
   )
