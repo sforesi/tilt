@@ -34,7 +34,7 @@ import * as rawgService  from '../../services/rawgService'
       <option value="racing">racing</option>
       <option value="massively-multiplayer">multiplayer</option>
       <option value="adventure">adventure</option>
-      <option value="fighting">fightng</option>
+      <option value="fighting">fighting</option>
       <option value="family">family</option>
       <option value="educational">educational</option>
       <option value="card">card</option>

@@ -20,7 +20,7 @@ const DisplayInfo = (props) => {
         <p>{props.game.rawg.released}</p>
         <p>{props.game.rawg.developers[0].name}</p>
         <p>{props.game.rawg.platforms.map((p) => `${p.platform.name} | `)}</p>
-        <p>{props.game.rawg.description_raw}</p>
+        <p className="description">{props.game.rawg.description_raw}</p>
       </div>
     </div>
   );
