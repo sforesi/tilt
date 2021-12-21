@@ -7,6 +7,10 @@ img {
   transition: transform 500ms;
 }
 
+.game-image {
+  border: 1px solid rgb(53,50,50);
+}
+
 .game-image:hover{
   transform: scale(1.1);
 }
@@ -17,10 +21,10 @@ img {
 }
 
 .page-container {
-  margin-top: 30px;
+  margin: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
 
 
@@ -37,15 +41,16 @@ img {
 }
 
 .drop-down {
-  margin: 10px;
+  margin: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
 
 select {
-  border: 2px solid rgb(53, 50, 50);
+  border: 1px solid rgb(53, 50, 50);
   border-radius: 3%;
   background-color: rgb(27, 25, 25);
   width: 250px;
 }
+/* -------------- */
