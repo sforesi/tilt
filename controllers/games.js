@@ -13,6 +13,15 @@ const index = async (req, res) => {
     return res.status(500).json(err)
   }
 }
+const search = async (req, res) => {
+  try {
+    const BASE_URL = `https://api.rawg.io/api/games?page_size=50&search=${req.params.id}&key=${process.env.API_KEY}`
+    const response = await axios.get(BASE_URL)
+    res.status(200).json(response.data)
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
 
 const show = async (req, res) => {
   try {
@@ -71,4 +80,5 @@ export {
 index,
 show,
 addToCollection,
+search,
 }
