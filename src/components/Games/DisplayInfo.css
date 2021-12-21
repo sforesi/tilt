@@ -75,16 +75,33 @@ body{
 }
 
 .banner-image{
-  display: flex;
+  display: inline-block;
   justify-content: center;
   /* border: 2px solid pink; */
   box-shadow: inset 0 0 10px 10px black;
+  position: relative;
+}
+
+.banner-image > img {
+  display: block;
+}
+
+.banner-image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
+  box-shadow: inset 0 0 500px rgba(0, 0, 0, 1);
 }
 
 #banner-image{
   width: 900px;
   object-fit: cover;
+
 }
+
 
 .container{
   font-family: neue-haas-unica, sans-serif;

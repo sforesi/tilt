@@ -15,7 +15,7 @@ const DisplayInfo = (props) => {
         <div className="left-column">
           <div className="image-container">
             <img
-              id="bg-image"
+              id="cover-image"
               src={props.game.rawg.background_image}
               alt="background-img"
             />
