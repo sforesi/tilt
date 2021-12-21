@@ -8,6 +8,7 @@ const router = Router()
 
 router.get('/', gameCtrl.index)
 router.get('/:id', gameCtrl.show)
+router.get('/search', gameCtrl.search)
 
 
 // ========= Protected Routes ========= 
