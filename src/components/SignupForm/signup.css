@@ -103,3 +103,9 @@ label {
   align-items: flex-start;
   margin-bottom: 16px;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
