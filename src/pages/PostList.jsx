@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getAllPosts } from '../services/postService'
+import Header from '../components/misc/Header'
 
 // Components
 import PostCard from '../components/Post/PostCard'
