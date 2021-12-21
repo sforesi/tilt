@@ -1,5 +1,6 @@
 import React from "react";
-import "./DisplayInfo.css";
+import "../../styles/DisplayInfo.css"
+
 const DisplayInfo = (props) => {
   console.log(props.game.rawg.name);
   return (
