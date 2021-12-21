@@ -1,7 +1,8 @@
 
 img {
-  width: 300px;
+  width: 400px;
   height: 225px;
+  border-radius: 2%;
 
 }
 
@@ -25,5 +26,15 @@ img {
 .games-dropdown {
   display: inline-block;
   position: relative;
+}
 
+.drop-down {
+  margin: 10px;
+}
+
+select {
+  border: 2px solid rgb(53, 50, 50);
+  border-radius: 3%;
+  background-color: rgb(27, 25, 25);
+  color: linear-gradient(315deg, #400468 10%, #79060d 90%);
 }
