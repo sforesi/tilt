@@ -57,15 +57,16 @@ body{
 } */
 .title{
   /* font-family: 'Lora', serif; */
-  font-size: x-large;
+  font-size: 32px;
   color: whitesmoke;
   font-family: plantin,sans-serif;
   font-weight: 600;
-  font-style: normal;
+  font-style: bolder;
 }
 
 .description{
   font-family: neue-haas-unica, sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 16px;
 }
