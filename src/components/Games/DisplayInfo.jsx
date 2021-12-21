@@ -11,10 +11,11 @@ const DisplayInfo = (props) => {
             src={props.game.rawg.background_image}
             alt="background-img"
           />
+
         </div>
       </div>
       <div className="right-column">
-        <p>{props.game.rawg.name}</p>
+        <p className="title">{props.game.rawg.name}</p>
         <p>{props.game.rawg.genres.map((g) => `${g.name} | `)}</p>
         <p>{props.game.rawg.released}</p>
         <p>{props.game.rawg.developers[0].name}</p>

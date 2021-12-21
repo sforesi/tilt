@@ -48,3 +48,9 @@ body{
   object-fit: cover;
   border-radius: 5px;
 }
+
+.title{
+  font-family: 'Lora', serif;
+  font-weight: bolder;
+  font-size: x-large;
+}
