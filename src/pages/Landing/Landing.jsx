@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/Landing.module.css'
 
 import Kerasel from "../../components/Kerasel/Kerasel"
 const Landing = () => {
