@@ -1,5 +1,6 @@
 import * as tokenService from './tokenService'
 
+
 const BASE_URL = '/api/posts/'
 
 export const getAllPosts = async (post) => {
