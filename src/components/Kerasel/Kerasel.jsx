@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GameShow from './GameShow';
 import * as rawgService from "../../services/rawgService"
 import { useState } from 'react';
@@ -52,10 +53,12 @@ return (
     responsive={responsive}
     >
       {games.map((game) => (
+      <Link to={`/games/${game.id}`}key={game.id}>
         <GameShow 
-        game={game}
-        key={game.id} 
+          game={game}
+          key={game.id} 
         />
+      </Link>
       ))}
     </Carousel>
   </div>
