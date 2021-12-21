@@ -18,7 +18,6 @@ const CreatePost = (props) => {
     // error:
     // added_by: props.user.profile, // who created the post
   }
-
   const handleCreatePost = async (e) => {
     e.preventDefault()
     try {
