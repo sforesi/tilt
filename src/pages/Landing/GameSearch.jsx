@@ -5,7 +5,7 @@ import './GameSearch.css'
 
 const Search = () => {
   return (
-    <div className='all-games-container'>
+    <div className='page-container'>
       <div className='games-dropdown'>
         <SearchGame genre="action"/>
       </div>

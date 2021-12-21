@@ -19,7 +19,8 @@ import * as rawgService  from '../../services/rawgService'
   }
   
   return (
-    <div>
+    <div className='content'>
+      <div className='drop-down'>
     <select name="games" onChange={searchGame}>
       <option value="shooter">select genre</option>
       <option value="action">action</option>
@@ -42,6 +43,8 @@ import * as rawgService  from '../../services/rawgService'
       <option value="family">family</option>
       <option value="shooter">shooter</option>
     </select>
+    </div>
+    <div className='games'>
       {games.map((game)=>(
         <Link to={`/games/${game.id}`}key={game.id}>
           <SearchCard
@@ -49,6 +52,7 @@ import * as rawgService  from '../../services/rawgService'
           />
         </Link>
       ))}
+      </div>
     </div>
   )
 }
