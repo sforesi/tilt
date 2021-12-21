@@ -31,7 +31,8 @@ body{
   border: 2px solid green;
   width: 40%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .image-container{
@@ -50,17 +51,19 @@ body{
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-  /* transition: transform 600ms; */
+  transition: transform 600ms;
 }
-/* .image-container img:hover{
+
+.image-container img:hover{
   transform: scale(.95);
-} */
+}
+
 .title{
   /* font-family: 'Lora', serif; */
   font-size: 32px;
   color: whitesmoke;
   font-family: plantin,sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-style: bolder;
 }
 
@@ -88,3 +91,7 @@ body{
 
 }
 
+.header{
+  display: flex;
+  align-items: center;
+}
