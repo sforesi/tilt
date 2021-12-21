@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Lora:wght@500&family=Quicksand&family=Raleway:wght@100&display=swap');
 
-html, body {
+html, body, #root {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,7 +9,9 @@ html, body {
   background: -webkit-linear-gradient(bottom, #0E0F14, #212730);
   background: -moz-linear-gradient(bottom, #0E0F14, #212730);
   background: linear-gradient(to top, #0E0F14, #212730);
-  height: 100vh;
+  /* height: 300vh;
+  width: 100vw; */
+
 }
 
 code {

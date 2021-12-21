@@ -17,6 +17,7 @@ body{
   /* border: 2px solid blue; */
   color: rgb(190, 190, 190);
   text-align: justify;
+  height: 100vh;
 }
 
 
@@ -77,9 +78,10 @@ body{
 .banner-image{
   display: inline-block;
   justify-content: center;
-  /* border: 2px solid pink; */
   box-shadow: inset 0 0 10px 10px black;
   position: relative;
+  height: 420px;
+  overflow: hidden;
 }
 
 .banner-image > img {
@@ -92,19 +94,38 @@ body{
   left: 0;
   top: 0;
   width: 100%;
-  height: 200%;
-  box-shadow: inset 0 0 500px rgba(0, 0, 0, 1);
+  height: 100%;
+  box-shadow: inset 0 0 120px 45px rgba(0, 0, 0, 1);
 }
 
 #banner-image{
-  width: 900px;
+  width: 100%;
   object-fit: cover;
-
 }
 
 
-.container{
+.display-info{
   font-family: neue-haas-unica, sans-serif;
+  margin: 0 !important;
+}
+
+.container-2{
+  display: inline-block;
+  justify-content: center;
+  /* border: 2px solid pink; */
+  box-shadow: inset 0 0 10px 10px black;
+  position: relative;
+  width: 100%;
+}
+
+.container-2::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* height: 200%; */
+  box-shadow: inset 0 0 500px rgba(0, 0, 0, 1);
 
 }
 
