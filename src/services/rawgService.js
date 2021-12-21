@@ -12,11 +12,23 @@ export const gamesGenre = async (genre) => {
 }
 
 export const gameSearch = async (search) => {
+  console.log(search)
   try {
-    const res = await fetch(`${BASE_URL}?search=${search}`)
+    const res = await fetch(`${BASE_URL}/search`,{
+      headers:{
+        "content-type":"application/json"
+      },
+        body:JSON.stringify({
+          search: search
+        }),
+        method: "POST"
+    })
+    console.log(res)
     const data = await res.json()
+    console.log(data.message)
     return data
   } catch (error) {
+    console.log(error)
     throw error
   }
 }

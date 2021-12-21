@@ -6,12 +6,13 @@ import * as rawgService  from '../../services/rawgService'
   const GamesSearch= (props) => {
 
   const [games, setGames]= useState([])
+  const [search, setSearch]= useState('')
 
-  const searchGame = async (e) => {
+  const handleSubmit = async (e) => {
 
     e.preventDefault()
       try {
-        const data = await rawgService.gameSearch(e.target.value)
+        const data = await rawgService.gameSearch(search)
         setGames(data.results)
         console.log(data.results)
     } catch (error) {
@@ -19,11 +20,6 @@ import * as rawgService  from '../../services/rawgService'
     }
   }
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    props.handleSubmit(games)
-    setGames('')
-  };
   
   return (
     <div>
@@ -32,8 +28,8 @@ import * as rawgService  from '../../services/rawgService'
           <input
             id="gameTitle"
             type="text"
-            value={setGames}
-            onChange={searchGame}
+            value={search}
+            onChange={e => setSearch(e.target.value)}
           />
           <input type="submit" value="Search Game" />
       {games.map((game)=>(
