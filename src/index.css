@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Lora:wght@500&family=Quicksand&family=Raleway:wght@100&display=swap');
 
-body {
+html, body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0E0F14;
+  background: -webkit-linear-gradient(bottom, #0E0F14, #212730);
+  background: -moz-linear-gradient(bottom, #0E0F14, #212730);
+  background: linear-gradient(to top, #0E0F14, #212730);
+  height: 100vh;
 }
 
 code {

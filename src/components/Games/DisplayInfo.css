@@ -1,23 +1,90 @@
 body{
   width: 100%;
   height: 100%;
-}
-
-.bg-image{
-  width: 480px;
-  height: 300px; 
-  
-  margin: auto;
-  justify-content: center;
-  text-align: center;
+  font-family: canada-type-gibson,sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .game-detail{
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family: 'Quicksand', sans-serif; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+
+  display: flex;
+  padding: 10px;
+  border: 2px solid blue;
+  color: rgb(190, 190, 190);
+  text-align: justify;
 }
 
 
+.right-column{
+  padding: 10px 50px 0px 0px;
+  border: 2px solid red;
+  width: 60%;
+}
+
+.left-column{
+  padding: 10px;
+  border: 2px solid green;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container{
+  width: 230px;
+  /* border: 1px solid brown; */
+  overflow: hidden;
+  height: 340px;
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 15px 0px #000000; 
+  box-shadow: 0px 5px 15px 0px #000000;
+}
+
+.image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  /* transition: transform 600ms; */
+}
+/* .image-container img:hover{
+  transform: scale(.95);
+} */
+.title{
+  /* font-family: 'Lora', serif; */
+  font-size: 32px;
+  color: whitesmoke;
+  font-family: plantin,sans-serif;
+  font-weight: 600;
+  font-style: bolder;
+}
+
+.description{
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.banner-image{
+  display: flex;
+  justify-content: center;
+  border: 2px solid pink;
+  box-shadow: inset 0 0 10px 10px black;
+}
+
+#banner-image{
+  width: 900px;
+  object-fit: cover;
+}
+
+.container{
+  font-family: neue-haas-unica, sans-serif;
+
+}
 

@@ -52,6 +52,7 @@ const App = () => {
           element={<GameSearch />}
 
         />
+
       </Routes>
     </>
   )
