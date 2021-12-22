@@ -1,10 +1,10 @@
 import React from "react";
 
-const addToCollection = (props) => {
-  console.log(props);
+const addToCollection = ({category, id}) => {
+  console.log(id)
   
   return(
-
+    
   )
 
 }
