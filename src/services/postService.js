@@ -35,7 +35,7 @@ export const createPost = async (post) => {
   }
 }
 
-export const updatePost = async (postId) => {
+export const updatePost = async (postId, formData) => {
   try {
     const res = await fetch(`${BASE_URL}${postId}`, {
       method: "PUT",
@@ -43,6 +43,7 @@ export const updatePost = async (postId) => {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + tokenService.getToken()
       },
+      body: JSON.stringify(formData)
     })
     const data = await res.json()
     return data

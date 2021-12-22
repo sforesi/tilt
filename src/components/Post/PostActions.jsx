@@ -2,9 +2,11 @@ import React from 'react'
 import '../../styles/Card.css'
 
 const PostActions = (props) => {
-  const authorId = props.post.added_by?._id ? props.post.added_by._id : props.post.added_by
+  const authorId = props.post.author?._id ? props.post.author._id : props.post.author
   const isAuthor = props.user?.profile === authorId
 
+    console.log(props)
+    
   return (
 
     isAuthor &&
@@ -12,9 +14,9 @@ const PostActions = (props) => {
       <button
         onClick={() => props.handleDeletePost(props.post._id)}
       >Delete</button>
-      {/* <button
-        onClick={() => props.handleUpdatePost(props.post._id)}
-      >update</button> */}
+      <button
+        onClick={() => props.setEdit(!props.edit)}
+      >Edit</button>
     </div>
   )
 }

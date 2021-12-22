@@ -38,6 +38,7 @@ const PostList = (props) => {
     return () => { setPosts([]) }
   }, [])
 
+  console.log(props.user)
   return (
     <div className="layout">
       <h1>Posts</h1>
@@ -49,9 +50,12 @@ const PostList = (props) => {
       {posts.length&&
       posts?.map((post) => (
         <PostCard
+          user={props.user}
           post={post}
           key={post._id}
           handleDeletePost={handleDeletePost}
+          posts={posts}
+          setPosts={setPosts}
           />
       ))}
     </div>
