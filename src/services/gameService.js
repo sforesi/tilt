@@ -23,3 +23,21 @@ export const getGame = async (rawg_id) => {
     throw error
   }
 }
+
+
+export const addToCollection = async (category, id) => {
+  try {
+    const res = await fetch(`${BASE_URL}${id}/collection/${category}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+      body: JSON.stringify(category)
+    })
+    const data = await res.json()
+    return data
+  } catch (error) {
+    throw error
+  }
+}
