@@ -3,7 +3,7 @@ import CreatePost from '../CreatePost/CreatePost'
 import PostList from '../PostList'
 
 import Kerasel from "../../components/Kerasel/Kerasel"
-const Landing = () => {
+const Landing = (props) => {
   return (
     <div>
       <h4 style={{color:"red"}}>action</h4>
@@ -12,7 +12,7 @@ const Landing = () => {
       <Kerasel genre="sports"/>
       <h4 style={{color:"red"}}>strategy</h4>
       <Kerasel genre="strategy"/>
-      <PostList/>
+      <PostList user={props.user}/>
     </div>
   )
 }
