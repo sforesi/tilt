@@ -8,7 +8,8 @@ const CollectionButtons = ({game}) => {
   const handleCollection = async(e) => {
     console.log('CATEGORY!!!!', e.target.id)
     console.log('GAME ID!!!!',gameId)
-    const data = await gameService.addToCollection()
+    const data = await gameService.addToCollection(e.target.id, gameId)
+    console.log(data)
     
   } 
 

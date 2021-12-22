@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SearchCard from './SearchCard'
-import * as rawgService  from '../../services/rawgService'
+import * as gameService from '../../services/gameService'
 
   const Collections = () => {
 
   const [collections, setCollections]= useState([])
 
   const sortCollections = async (e) => {
-
     e.preventDefault()
       try {
-        const data = await rawgService.Games(e.target.value)
+        const data = await gameService.addToCollection(e.target.value)
         setCollections(data.results)
-        console.log(rawgService.Games)
     } catch (error) {
       throw error
     }
@@ -30,11 +28,11 @@ import * as rawgService  from '../../services/rawgService'
     
     </select>
     </div>
-    <div className='games'>
-      {collections.map((collection)=>(
-        <Link to={`/collection/${collection.id}`}key={collection.id}>
+    <div className='collections'>
+      {collections.map((category)=>(
+        <Link to={`/collections/${category.id}`}key={category.id}>
           <SearchCard
-          collection={collection}
+          category = {category}
           />
         </Link>
       ))}
