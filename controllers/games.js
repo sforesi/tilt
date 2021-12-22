@@ -1,5 +1,6 @@
 import { Profile } from '../models/profile.js'
 import { Game } from '../models/game.js'
+import { Review } from '../models/review.js'
 
 import axios from 'axios'
 
@@ -30,7 +31,7 @@ const show = async (req, res) => {
   try {
     const BASE_URL = `https://api.rawg.io/api/games/${req.params.id}?key=${process.env.API_KEY}`
     const response = await axios.get(BASE_URL)
-    const game = await Game.findOne({ rawgId: req.params.id})
+    const game = await Game.findOne({ rawgId: req.params.id}).populate('reviews')
     if (game) {
       const gameData = {
         game: game,
@@ -83,9 +84,26 @@ const addToCollection = async(req, res) => {
 }
 
 
+const createReview = async (req, res) => {
+  try {
+    req.body.game = req.params.id
+    req.body.author = req.user.profile
+    const review = await Review.create(req.body)
+    const game = await Game.findById(req.params.id)
+    game.reviews.push(review._id)
+    await game.save()
+    res.status(201).json(review)
+
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
+    
+
 export {
 index,
 show,
 addToCollection,
 search,
+createReview,
 }

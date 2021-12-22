@@ -10,13 +10,15 @@ import DisplayInfo from '../../components/Games/DisplayInfo'
 const GameDetail = (props) => {
   const {rawg_id} = useParams()  
   const [game, setGame] = useState()
-// 8821
+  const [reviews, setReviews] = useState([])
+
   useEffect(() => {
     const fetchGame = async () => {
       try {
         const gameData = await gameService.getGame(rawg_id)
-        console.log('see me', gameData)
+        console.log('GAME DATA', gameData)
         setGame(gameData)
+        setReviews(gameData.game.reviews)
       } catch (error) {
         throw error
       }
@@ -29,6 +31,8 @@ const GameDetail = (props) => {
       {game &&
       <DisplayInfo
       game={game}
+      reviews={reviews}
+      setReviews={setReviews}
       />
       }
     </>

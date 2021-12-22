@@ -1,12 +1,12 @@
 import * as tokenService from './tokenService'
 
-const BASE_URL = '/api/reviews/'
+const BASE_URL = '/api/games/'
 
 
 
-export const createReview = async (review) => {
+export const createReview = async (gameId, review) => {
   try {
-    const res = await fetch(BASE_URL, {
+    const res = await fetch(`${BASE_URL}${gameId}/reviews`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
