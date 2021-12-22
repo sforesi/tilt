@@ -3,9 +3,9 @@ import { Post } from '../models/post.js'
 
 const create = async (req, res) => {
   try {
-    console.log("whatever you want")
     req.body.author = req.user.profile
     const post = await new Post(req.body)
+    console.log("HELLOOOO",req.body)
     await post.save()
     await Profile.updateOne(
       { _id: req.user.profile },

@@ -7,16 +7,21 @@ const PostForm = (props) => {
       </div>
       <input 
         required 
-        name="post"
+        name="thread"
         autoComplete='off'
         placeholder='post'
-        value={props.post}
-        onChange={(e) => props.setPost(e.target.value)}
+        value={props.postForm.thread}
+        onChange={(e) => props.handleChange(e)}
         />
-        <textarea
-        className='text-area'
-        value={props.post}
-      ></textarea>
+        <input 
+        required 
+        name="date"
+        type="date"
+        autoComplete='off'
+        placeholder='post'
+        value={props.postForm.date}
+        onChange={(e) => props.handleChange(e)}
+        />
       <button type="submit">Save</button>
     </form>
     
