@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import * as profileService from '../../services/profileService'
 
-const Profiles = () => {
+
+const Profiles = (props) => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(()=> {
@@ -10,18 +11,14 @@ const Profiles = () => {
   }, [])
 
   return (
-    <>
-      <h1>Hello. This is a list of all the profiles.</h1>
-      {profiles.length ? 
-        <>
-          {profiles.map(profile=>
-            <p key={profile._id}>{profile.name}</p>
-          )}
-        </>
-      :
-        <p>No profiles yet</p>
-      }
-    </>
+    <div className='collection-container'>
+      <main>
+        <h1>Your Collection</h1>
+      </main>
+      <div className='collec-buttons'>
+        
+      </div>
+    </div>
   )
 }
 export default Profiles
