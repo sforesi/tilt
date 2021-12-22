@@ -1,5 +1,5 @@
 import React from "react";
-
+import * as gameService from '../../services/gameService'
 
 
 const CollectionButtons = ({game}) => {
@@ -8,6 +8,7 @@ const CollectionButtons = ({game}) => {
   const handleCollection = async(e) => {
     console.log('CATEGORY!!!!', e.target.id)
     console.log('GAME ID!!!!',gameId)
+    const data = await gameService.addToCollection()
   } 
 
   return(
