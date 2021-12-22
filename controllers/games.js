@@ -37,8 +37,12 @@ const show = async (req, res) => {
         rawg: response.data,
       }
       return res.status(201).json(gameData)
+    
     } else {
+      console.log(response.data)
       req.body.rawgId = req.params.id
+      req.body.image = response.data.background_image
+      req.body.name = response.data.name
       const createGame = await Game.create(req.body)
       const gameData = {
         game: createGame,

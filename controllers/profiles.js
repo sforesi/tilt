@@ -9,4 +9,10 @@ function index(req, res) {
   })
 }
 
-export { index }
+async function getProfileById (req, res) {
+  const profile = await Profile.findById(req.user.profile)
+  .populate('collections.games')
+  return res.status(200).json(profile)
+}
+
+export { index, getProfileById }

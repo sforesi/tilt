@@ -1,12 +1,14 @@
 import * as tokenService from '../services/tokenService'
 
+
 const BASE_URL = '/api/profiles'
 
-async function getAllProfiles() {
+async function getProfileById() {
   const res = await fetch(BASE_URL, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
   })
-  return await res.json()
+  const data = await res.json()
+  return data
 }
 
-export { getAllProfiles }
+export { getProfileById }

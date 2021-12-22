@@ -11,6 +11,7 @@ import cors from 'cors'
 import { router as authRouter } from './routes/auth.js'
 import { router as gamesRouter } from './routes/games.js'
 import { router as postsRouter } from './routes/posts.js'
+import { router as profileRouter } from './routes/profiles.js'
 
 
 import('./config/database.js')
@@ -30,6 +31,7 @@ app.use(express.json())
 app.use('/api/games', gamesRouter)
 app.use('/api/posts', postsRouter)
 app.use('/api/auth', authRouter)
+app.use('/api/profiles', profileRouter)
 
 app.get('/*', function (req, res) {
   res.sendFile(

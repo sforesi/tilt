@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
-import Collections from '../../components/Games/CollecList'
+import Collections from '../../components/Games/CollectList'
 import { addToCollection } from '../../services/gameService'
 
-const Profiles = () => {
-  const [profiles, setProfiles] = useState([])
+const Profile = () => {
+  const [profile, setProfile] = useState()
 
   useEffect(()=> {
-    profileService.getAllProfiles()
-    .then(profiles => setProfiles(profiles))
+    profileService.getProfileById()
+    .then(profile => setProfile(profile))
   }, [])
-
+console.log("!!!",profile)
   return (
     <div className='collection-container'>
       <main>
@@ -19,11 +19,10 @@ const Profiles = () => {
       <div className='collec-buttons'>
         <Collections
           addToCollection={addToCollection}
-          profiles={profiles}
-
+          profile={profile}
         />
       </div>
     </div>
   )
 }
-export default Profiles
+export default Profile

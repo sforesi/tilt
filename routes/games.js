@@ -13,7 +13,7 @@ router.post('/search', gameCtrl.search)
 
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
-router.post('/:id/collection/:category',checkAuth, gameCtrl.addToCollection)
+router.post('/:id/collections/:category',checkAuth, gameCtrl.addToCollection)
 
 
 
