@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GameShow from './GameShow';
-import * as rawgService from "../../services/rawgService"
-import { useState } from 'react';
-import { useEffect } from 'react';
+import CollectionShow from './CollectionShow';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../styles/kerasel.css"
-import PostList from '../../pages/PostList';
+
 
 
 const responsive = {
@@ -31,23 +28,14 @@ const responsive = {
 };
 
 
-const Kerasel = ({genre}) => {
+const CollectCarousel = ({games, title}) => {
   
-  const [games, setGames] = useState([])
   console.log("hi there are games", games)
-
-  useEffect(() => {
-    const getGenre = async () => {
-    const data = await rawgService.gamesGenre(genre)
-    setGames(data.results)
-    }
-  getGenre()
-}, [genre])
 
 return (
   
   <div className='keraselContainer'>
-    
+    <h1>{title}</h1>
     <Carousel 
     ssr
     partialVisible
@@ -57,7 +45,7 @@ return (
     >
       {games.map((game) => (
       <Link to={`/games/${game.id}`}key={game.id}>
-        <GameShow 
+        <CollectionShow 
           game={game}
           key={game.id} 
         />
@@ -72,4 +60,4 @@ return (
 )
 }
 
-export default Kerasel 
+export default CollectCarousel

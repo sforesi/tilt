@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
-import Collections from '../../components/Games/CollectList'
-import { addToCollection } from '../../services/gameService'
+import CollectCarousel from './CollectCarousel'
+
 
 const Profile = () => {
   const [profile, setProfile] = useState()
@@ -16,11 +16,13 @@ console.log("!!!",profile)
       <main>
         <h1>Your Collection</h1>
       </main>
-      <div className='collec-buttons'>
-        <Collections
-          addToCollection={addToCollection}
-          profile={profile}
-        />
+      <div className='collect-buttons'>
+        {profile?.collections.map((collection) =>(
+          <CollectCarousel
+            title = {collection.category}
+            games = {collection.games}
+          />
+        ))}
       </div>
     </div>
   )
