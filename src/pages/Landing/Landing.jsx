@@ -12,9 +12,8 @@ const Landing = () => {
       <Kerasel genre="sports"/>
       <h4 style={{color:"red"}}>strategy</h4>
       <Kerasel genre="strategy"/>
-      <PostList style={{color:"red"}}
-        />
-      </div>
+      <PostList/>
+    </div>
   )
 }
 

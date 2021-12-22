@@ -1,6 +1,6 @@
 import React from "react";
 import * as gameService from '../../services/gameService'
-
+// import { RiHeartAddLine } from 'react-icons/fa'
 
 const CollectionButtons = ({game}) => {
   console.log(game)
@@ -9,17 +9,20 @@ const CollectionButtons = ({game}) => {
     console.log('CATEGORY!!!!', e.target.id)
     console.log('GAME ID!!!!',gameId)
     const data = await gameService.addToCollection()
+    
   } 
 
   return(
-    <div>
+    <div className="collection-buttons">
       <button 
       onClick={(e) => handleCollection(e)}
-      id="favorites">FAVORTIE
+      id="favorites"
+      >FAVORITE
       </button>
       <button 
       onClick={(e) => handleCollection(e)}
       id="played">PLAYED
+  
       </button>
       <button 
       onClick={(e) => handleCollection(e)}
@@ -28,6 +31,8 @@ const CollectionButtons = ({game}) => {
     </div>
   )
 }
+
+
 
 
 

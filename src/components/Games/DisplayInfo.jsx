@@ -3,7 +3,6 @@ import "../../styles/DisplayInfo.css"
 import CollectionButtons from "./CollectionButtons";
 
 
-
 const DisplayInfo = (props) => {
   console.log(props.game.rawg.name);
   return (
