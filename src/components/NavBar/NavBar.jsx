@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './NavBar.css'
+import GamesSearch from '../Games/SearchGame'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
@@ -8,9 +9,11 @@ const NavBar = ({ user, handleLogout }) => {
       {user ?
         <nav className='navigation-bar'>
           <img id="logo"src="tilt.png" alt='logo'/>
+          <GamesSearch/>
           <Link to="/">HOME</Link>
           <Link to="/games">GAMES</Link>
           <Link to="/profile">COLLECTION</Link>
+          <Link to="/search">SEARCH</Link>
           
           {/* New post? */}
           {/* <Link to="/new">POSTS</Link> */}
