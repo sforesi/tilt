@@ -4,7 +4,7 @@ import CollectionButtons from "./CollectionButtons";
 
 
 const DisplayInfo = (props) => {
-  console.log(props.game.rawg.name);
+  // console.log(props.game.rawg.name);
   return (
     <div className="display-info">
       <div className="container-2">
