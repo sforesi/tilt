@@ -7,6 +7,7 @@
   border: 1px solid rgb(53, 50, 50);
   overflow: hidden;
   border-radius: 5px;
+  object-fit: cover;
 
 }
 
@@ -22,4 +23,8 @@
   transform: scale(1.2);
 }
 
+.image-container{
+  width: 330px;
+  height: 200px;
+}
 

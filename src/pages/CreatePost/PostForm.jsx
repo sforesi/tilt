@@ -3,24 +3,26 @@ import React from 'react'
 const PostForm = (props) => {
   return (
     <form className="create-form" onSubmit={props.handleCreatePost}>
-      <div className="review-prompt">
-        <label Enter review></label>
+      <div className="post-prompt">
       </div>
-      {/* <input 
+      <input 
         required 
-        name="review"
+        name="thread"
         autoComplete='off'
-        placeholder='review'
-        value={props.name}
-        onChange={(e) => props.setReview(e.target.value)}
-        /> */}
-        <textarea
-        className='input-field'
-        value={props.name}
-      ></textarea>
-      <button>
-        Save
-      </button>
+        placeholder='post'
+        value={props.postForm.thread}
+        onChange={(e) => props.handleChange(e)}
+        />
+        <input 
+        required 
+        name="date"
+        type="date"
+        autoComplete='off'
+        placeholder='post'
+        value={props.postForm.date}
+        onChange={(e) => props.handleChange(e)}
+        />
+      <button type="submit">Save</button>
     </form>
     
 

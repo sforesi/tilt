@@ -1,31 +1,37 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 // import '../../styles/Create.css'
-
+import Profile from '../Profiles/Profiles'
 // Components
 import PostForm from './PostForm'
-import Header from '../../components/misc/Header'
 
 //Services
 import { createPost } from '../../services/postService.js'
 
 const CreatePost = (props) => {
   const navigate = useNavigate()
-  const [post, setPost] = useState('')
+  const [postForm, setPostForm] = useState({
+    thread: "",
+    author: props.user?.profile,
+    date:"date"
 
-  const formData = {
-    post: post, // question input
 
-    // error:
-    // added_by: props.user.profile, // who created the post
+  })
+
+  const handleChange = e => {
+    setPostForm({
+      ...postForm,
+      [e.target.name]: e.target.value,
+    })
   }
+
 
   const handleCreatePost = async (e) => {
     e.preventDefault()
     try {
-      const newPost = await createPost(formData)
-      console.log(newPost) //<= verify new post data
-      navigate('/posts')
+      const newPost = await createPost(postForm)
+      console.log("HEELLOOOO", newPost)
+      props.setPosts([newPost, ...props.posts])
     } catch (error) {
       throw error
     }
@@ -34,11 +40,12 @@ const CreatePost = (props) => {
   return (
     <div className="layout">
       <p>Post</p>
-    {/* <Header title='' /> */}
     <PostForm
-      post={post}
-      setPost={setPost}
+      postForm={postForm}
+      setPost={setPostForm}
+      user={props.user}
       handleCreatePost={handleCreatePost}
+      handleChange={handleChange}
     />
   </div>
   )

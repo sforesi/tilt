@@ -5,8 +5,6 @@ const PostCard = (props) => {
   return (
     <div className="post-card">
 
-      <div className="card-header"></div>
-
       <div className="post-container">
         <p>{props.post.post}</p>
       </div>
