@@ -45,7 +45,7 @@ return (
     
     >
       {games.map((game) => (
-      <Link to={`/games/${game._id}`}key={game.id}>
+      <Link to={`/games/${game.rawgId}`}key={game.id}>
         <CollectionShow 
           game={game}
           key={game.id} 
