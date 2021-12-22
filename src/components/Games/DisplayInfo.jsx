@@ -36,7 +36,9 @@ const DisplayInfo = (props) => {
               <p>{props.game.rawg.released}</p>
             </div>
             <p className="description">{props.game.rawg.description_raw}</p>
-            <CollectionButtons/>
+            <CollectionButtons
+            game={props.game}
+            />
           </div>
         </div>
       </div>

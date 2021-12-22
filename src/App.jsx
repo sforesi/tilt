@@ -56,7 +56,6 @@ const App = () => {
           path="/search"
           element={<GamesSearch />}
         />
-
       </Routes>
     </>
   )
