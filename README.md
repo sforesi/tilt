@@ -55,6 +55,8 @@
 ### **Credits & Sources** 
 
 
-- []()
+- [RAWG Games API](https://rawg.io/apidocs)
+- [Tilt Logo](https://mungai95.github.io/about.html)
+- [Whimsical](https://whimsical.com/)
   
 
