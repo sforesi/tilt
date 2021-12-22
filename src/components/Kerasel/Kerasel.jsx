@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../styles/kerasel.css"
+import PostList from '../../pages/PostList';
 
 
 const responsive = {
@@ -45,12 +46,15 @@ const Kerasel = ({genre}) => {
 
 
 return (
+  
   <div className='keraselContainer'>
+    
     <Carousel 
     ssr
     partialVisible
     itemClass="image-item"
     responsive={responsive}
+    
     >
       {games.map((game) => (
       <Link to={`/games/${game.id}`}key={game.id}>
@@ -61,7 +65,11 @@ return (
       </Link>
       ))}
     </Carousel>
+      <PostList
+    />
+
   </div>
+  
 )
 }
 
