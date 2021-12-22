@@ -1,5 +1,8 @@
 import React from "react";
+import CollectionButtons from "./CollectionButtons";
 import "./DisplayInfo.css";
+
+
 const DisplayInfo = (props) => {
   console.log(props.game.rawg.name);
   return (
@@ -33,11 +36,7 @@ const DisplayInfo = (props) => {
               <p>{props.game.rawg.released}</p>
             </div>
             <p className="description">{props.game.rawg.description_raw}</p>
-        <div className="collection-buttons">
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
+            <CollectionButtons/>
           </div>
         </div>
       </div>
