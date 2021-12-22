@@ -35,6 +35,11 @@ const DisplayInfo = (props) => {
             </div>
             <p className="description">{props.game.rawg.description_raw}</p>
           </div>
+          <div className="collections-buttons">
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
         </div>
       </div>
 
