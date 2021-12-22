@@ -5,7 +5,7 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
-import Profiles from './pages/Profiles/Profiles'
+import Profile from './pages/Profiles/Profile'
 import GameDetail from './pages/Games/GameDetail'
 import GameSearch from './pages/Landing/GameSearch'
 import PostList from './pages/PostList'
@@ -42,8 +42,8 @@ const App = () => {
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
         <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          path="/profile"
+          element={user ? <Profile /> : <Navigate to="/login" />}
         />
         <Route
           path="/games/:rawg_id"

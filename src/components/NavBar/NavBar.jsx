@@ -10,7 +10,7 @@ const NavBar = ({ user, handleLogout }) => {
           <img id="logo"src="tilt.png" alt='logo'/>
           <Link to="/">HOME</Link>
           <Link to="/games">GAMES</Link>
-          <Link to="/profiles">COLLECTION</Link>
+          <Link to="/profile">COLLECTION</Link>
           
           {/* New post? */}
           {/* <Link to="/new">POSTS</Link> */}

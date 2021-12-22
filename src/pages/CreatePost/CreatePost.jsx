@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 // import '../../styles/Create.css'
-import Profile from '../Profiles/Profiles'
+import Profile from '../Profiles/Profile'
 // Components
 import PostForm from './PostForm'
 

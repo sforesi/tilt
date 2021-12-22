@@ -1,4 +1,3 @@
-
 import * as tokenService from './tokenService'
 const BASE_URL = '/api/games/' //<= does this route look familiar?
 
@@ -28,13 +27,13 @@ export const getGame = async (rawg_id) => {
 export const addToCollection = async (category, id) => {
   console.log(category, id)
   try {
-    const res = await fetch(`${BASE_URL}${id}/collection/${category}`, {
+    const res = await fetch(`${BASE_URL}${id}/collections/${category}`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
         'Authorization': `Bearer ${tokenService.getToken()}`
       },
-      // body: JSON.stringify(category)
+      //body: JSON.stringify(category)
     })
     const data = await res.json()
     return data
