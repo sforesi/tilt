@@ -1,7 +1,6 @@
 import React from "react";
 import "../../styles/DisplayInfo.css"
 import CollectionButtons from "./CollectionButtons";
-import "../../styles/DisplayInfo.css"
 
 
 const DisplayInfo = (props) => {

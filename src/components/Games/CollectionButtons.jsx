@@ -9,6 +9,7 @@ const CollectionButtons = ({game}) => {
     console.log('CATEGORY!!!!', e.target.id)
     console.log('GAME ID!!!!',gameId)
     const data = await gameService.addToCollection()
+    
   } 
 
   return(

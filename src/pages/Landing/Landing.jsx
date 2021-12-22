@@ -14,8 +14,8 @@ const Landing = () => {
       <h4>strategy</h4>
       <Kerasel genre="strategy"/>
     </div>
-    <CreatePost/
-    >
+    {/* <CreatePost/ */}
+    {/* > */}
       </div>    
   //   <div className="layout">
   //   <Header title='Create Post' />
