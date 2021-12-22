@@ -64,8 +64,8 @@ return (
       </Link>
       ))}
     </Carousel>
-      {/* <PostList
-    /> */}
+      <PostList
+    />
 
   </div>
   
