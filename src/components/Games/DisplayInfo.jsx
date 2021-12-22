@@ -5,13 +5,13 @@ const DisplayInfo = (props) => {
   return (
     <div className="display-info">
       <div className="container-2">
-        <div className="banner-image">
+        {/* <div className="banner-image">
           <img 
           id="banner-image"
           src={props.game.rawg.background_image}
           alt="banner-img"
           />
-        </div>
+        </div> */}
         <div className="game-detail">
           <div className="left-column">
             <div className="image-container">
@@ -33,6 +33,11 @@ const DisplayInfo = (props) => {
               <p>{props.game.rawg.released}</p>
             </div>
             <p className="description">{props.game.rawg.description_raw}</p>
+        <div className="collection-buttons">
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
           </div>
         </div>
       </div>
