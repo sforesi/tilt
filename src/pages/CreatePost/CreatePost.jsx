@@ -13,9 +13,6 @@ const CreatePost = (props) => {
   const [postForm, setPostForm] = useState({
     thread: "",
     author: props.user?.profile,
-    date:"date"
-
-
   })
 
   const handleChange = e => {
@@ -39,7 +36,6 @@ const CreatePost = (props) => {
 
   return (
     <div className="layout">
-      <p>Post</p>
     <PostForm
       postForm={postForm}
       setPost={setPostForm}

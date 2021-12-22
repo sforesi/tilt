@@ -54,7 +54,6 @@ return (
     partialVisible
     itemClass="image-item"
     responsive={responsive}
-    
     >
       {games.map((game) => (
       <Link to={`/games/${game.id}`}key={game.id}>
@@ -65,8 +64,6 @@ return (
       </Link>
       ))}
     </Carousel>
-      <PostList
-    />
 
   </div>
   

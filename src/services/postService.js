@@ -34,3 +34,30 @@ export const createPost = async (post) => {
     throw error
   }
 }
+
+export const updatePost = async (postId) => {
+  try {
+    const res = await fetch(`${BASE_URL}${postId}`, {
+      method: "PUT",
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': 'Bearer ' + tokenService.getToken()
+      },
+    })
+    const data = await res.json()
+    return data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const deletePost = async (postId) => {
+  try {
+    await fetch(`${BASE_URL}${postId}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': 'Bearer ' + tokenService.getToken() }
+    })
+  } catch (error) {
+    throw error
+  }
+}
