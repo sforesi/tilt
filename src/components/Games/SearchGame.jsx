@@ -23,7 +23,6 @@ import * as rawgService  from '../../services/rawgService'
   
   return (
     <div>
-      <h1 style={{color: "green"}}>HEEEEELELLLLOADASDASDASDASDASDASDASDKDLOFWEOFJNM</h1>
     <form onSubmit={handleSubmit}>
           <input
             id="gameTitle"

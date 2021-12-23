@@ -4,7 +4,6 @@ import CollectionButtons from "./CollectionButtons";
 import Reviews from "./Reviews/Reviews"
 
 const DisplayInfo = (props) => {
-  console.log(props.game);
   return (
     <div className="display-info">
       <div className="container-2">
