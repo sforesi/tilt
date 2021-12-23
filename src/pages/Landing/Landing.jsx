@@ -1,16 +1,16 @@
 import React from 'react'
-import CreatePost from '../CreatePost/CreatePost'
 import PostList from '../PostList'
-
 import Kerasel from "../../components/Kerasel/Kerasel"
+import '../../styles/landing.css'
+
 const Landing = (props) => {
   return (
-    <div>
-      <h4 style={{color:"red"}}>action</h4>
+    <div className='main-content'>
+      <h4 className="genre-Title">Action</h4>
       <Kerasel genre="action"/>
-      <h4 style={{color:"red"}}>sports</h4>
+      <h4 className="genre-Title">Sports</h4>
       <Kerasel genre="sports"/>
-      <h4 style={{color:"red"}}>strategy</h4>
+      <h4 className="genre-Title">Strategy</h4>
       <Kerasel genre="strategy"/>
       <PostList user={props.user}/>
     </div>

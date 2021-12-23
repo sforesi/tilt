@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.genre-Title {
+  color:rgb(190, 190, 190);
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+.poststitle {
+  color:rgb(190, 190, 190);
+  margin-top: 75px ;
+}
+
+.main-content {
+  margin-top: 150px;
+}
+
