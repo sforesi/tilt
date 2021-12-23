@@ -65,7 +65,8 @@
 .textarea {
   width: 450px;
   height: 100px;
-  color:rgb(190, 190, 190);
+  color:rgb(0, 0, 0);
+  border-radius: 5px;
 }
 
 .postarea {
@@ -88,5 +89,11 @@
 
 .postbutton {
   margin-top: 15px;
+  width: 65px;
+  border-radius: 5px;
+  border: 1 px rgb(190, 190, 190);
+  background: rgb(53, 50, 50);
+  padding: inherit !important;
+  box-shadow: 0px 5px 15px 0px #000000;
 }
 
