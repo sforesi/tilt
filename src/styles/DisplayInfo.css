@@ -136,8 +136,8 @@ body{
   margin-top: 10px;
 }
 
-.collection-buttons{
+.collection-buttons img{
   display: flex;
-  height: 100px;
-  width: 134;
+  height: 20px;
+  width: 30px;
 }
