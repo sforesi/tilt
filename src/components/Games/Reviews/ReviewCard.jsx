@@ -1,5 +1,4 @@
 import React from "react";
-import * as reviewService from '../../../services/reviewService'
 import '../../../styles/DisplayInfo.css'
 
 

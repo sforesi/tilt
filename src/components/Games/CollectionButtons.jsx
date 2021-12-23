@@ -11,7 +11,7 @@ const CollectionButtons = ({game}) => {
   console.log(game)
   const gameId = game.game._id
   const handleCollection = async(e) => {
-    const data = await gameService.addToCollection(e.target.id, gameId)
+    await gameService.addToCollection(e.target.id, gameId)
     
   } 
 
