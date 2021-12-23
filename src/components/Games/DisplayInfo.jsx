@@ -32,9 +32,9 @@ const DisplayInfo = (props) => {
           <div className="right-column">
             <div className="header">
               <p className="title">{props.game.rawg.name}</p>
-              <p>{props.game.rawg.released}</p>
+              <p>{gameYear}</p>
             </div>
-            <p className="description">{props.game.rawg.description_raw}</p>
+            <p className="description">{gameDescription}</p>
             <CollectionButtons
             game={props.game}
             />
