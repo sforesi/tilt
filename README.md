@@ -1,27 +1,55 @@
-# Tilt
+# T I L T
 tilt is a social netwrok for gamers, meant to provide a way to archive your collection of games across genres platforms and decades. Tilt allows you to search through a games pages, or for  a specific title as well as add any game to a collection whether it be favorite, played or a wishlist.
 
-## **Getting Started**
+[t i l t](https://tilt-games.herokuapp.com)
 
-[Deployed Link](https://tilt-games.herokuapp.com)
+## The website ⬇
 
-### **Application Description & Overview** 
+###  Home
+If a person wishes to browse through games or search for a game of their liking, they wont have to sign up!
+
+!["home"](home.png)
+
+### Search for any game!
+
+A user has the ability to search directly for a game
+
+ !["Search"](search.png)
+
+
+### Details
+A user can view any game's detail page
+
+ !["Detail"](detail.png)
+
+
+### Genre
+A user has the ability to view any genre of their choosing
+
+!["genre"](genre.png)
+
+### Collection
+A user has the ability to add any game while browsing to their Played/Completed/Favorited list
+
+!["collection"](collection.png)
 
 
 
-### **Screenshots**
+### Posts
 
-![Homepage]()
-![Game Index]()
-![Game Detail]()
-![About Page]()
+Users can post on the home page, to share their thought, ideas, or anything really with all other users 
+
+!["posts"](posts.png)
 
 
-### **Trello**
+
+
+### Trello
+
 
 [Planning Materials](https://trello.com/b/sCZE4iqp/unit-4-sprint-board)
 
-### **Techonologies Used**
+### Techonologies Used
 
 - React Native 
 - Bootstrap 
@@ -29,22 +57,23 @@ tilt is a social netwrok for gamers, meant to provide a way to archive your coll
 - MongoDB
 - Express 
 - CSS 
-- JS
-- GOOGLE FONTS 
+- JavaScript
+- Mongoose
 
 
-### **Credits & Sources** 
+ ## Sources and Credits
 
-
-- [RAWG Games API](https://rawg.io/apidocs)
-- [Tilt Logo](https://mungai95.github.io/about.html)
-- [REACT-multi-carousel]()
+* Game data sourced from [RAWG Games API](https://rawg.io/apidocs)
+* [Tilt Logo](https://mungai95.github.io/about.html) designed by Michael Mungai
+* Carousel from [REACT-multi-carousel]()
 
   
 
-### **Ice-Box Goals & Next Steps** 
+## Next Steps
 
-- [ ] AAU I want to make calls to a Youtube api so that i can see gameplay of the title in its details.
-- [ ] 
-- [ ] AAU I want to make calls to a Steam API so that I can purchase games on through them.
-- [ ] AAU I want to be able to follow other users to see their rating, comments and favorite games.
+
+- [ ] Have usernames display with corresponding reviews/posts
+- [ ] Incorporate Steam API to add the ability to be directed to purchase a title
+- [ ] Display significantly more games, and potentially look into pagination
+- [ ] Search bar in nav
+- [ ] I want to be able to follow other users to see their reviews, posts and collected games.
