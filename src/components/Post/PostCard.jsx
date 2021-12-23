@@ -21,7 +21,6 @@ const handleSubmit = async (e) => {
   )))
   setEdit(false)
 }
-console.log(props.user)
 
   return (
     !edit ? 

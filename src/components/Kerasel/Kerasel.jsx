@@ -34,7 +34,6 @@ const responsive = {
 const Kerasel = ({genre}) => {
   
   const [games, setGames] = useState([])
-  console.log("hi there are games", games)
 
   useEffect(() => {
     const getGenre = async () => {

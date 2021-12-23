@@ -13,7 +13,6 @@ export const getAllGames = async () => {
 
 
 export const getGame = async (rawg_id) => {
-  console.log(rawg_id)
   try {
     const res = await fetch(`${BASE_URL}${rawg_id}`)
     const data = await res.json()
@@ -25,7 +24,6 @@ export const getGame = async (rawg_id) => {
 
 
 export const addToCollection = async (category, id) => {
-  console.log(category, id)
   try {
     const res = await fetch(`${BASE_URL}${id}/collections/${category}`, {
       method: 'POST',
@@ -33,7 +31,6 @@ export const addToCollection = async (category, id) => {
         'content-type': 'application/json',
         'Authorization': `Bearer ${tokenService.getToken()}`
       },
-      //body: JSON.stringify(category)
     })
     const data = await res.json()
     return data
