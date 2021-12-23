@@ -12,7 +12,6 @@ export const gamesGenre = async (genre, page) => {
 }
 
 export const gameSearch = async (search) => {
-  console.log(search)
   try {
     const res = await fetch(`${BASE_URL}/search`,{
       headers:{
@@ -23,9 +22,7 @@ export const gameSearch = async (search) => {
         }),
         method: "POST"
     })
-    console.log(res)
     const data = await res.json()
-    console.log(data.message)
     return data
   } catch (error) {
     console.log(error)

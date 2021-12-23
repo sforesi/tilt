@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
-// import '../../styles/Create.css'
-import Profile from '../Profiles/Profile'
 // Components
 import PostForm from './PostForm'
 
@@ -27,7 +25,6 @@ const CreatePost = (props) => {
     e.preventDefault()
     try {
       const newPost = await createPost(postForm)
-      console.log("HEELLOOOO", newPost)
       props.setPosts([newPost, ...props.posts])
     } catch (error) {
       throw error

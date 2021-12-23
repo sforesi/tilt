@@ -14,7 +14,6 @@ import * as rawgService  from '../../services/rawgService'
       try {
         const data = await rawgService.gameSearch(search)
         setGames(data.results)
-        console.log(data.results)
     } catch (error) {
       throw error
     }

@@ -22,17 +22,9 @@ const PostList = (props) => {
   }
 
 
-  // const handleUpdatePost = (e) => {
-  //   setPosts({
-  //     ...posts,
-  //     [e.target.name]: e.target.value,
-  //   })
-  // }
-
   useEffect(() => {
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
-      console.log("postDAta", postData)
       setPosts(postData)
     }
     fetchAllPosts()

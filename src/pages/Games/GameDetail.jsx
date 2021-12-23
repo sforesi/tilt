@@ -16,7 +16,6 @@ const GameDetail = (props) => {
     const fetchGame = async () => {
       try {
         const gameData = await gameService.getGame(rawg_id)
-        console.log('GAME DATA', gameData)
         setGame(gameData)
         setReviews(gameData.game.reviews)
       } catch (error) {
