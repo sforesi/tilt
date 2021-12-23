@@ -5,13 +5,15 @@
 }
 
 .banner-img {
-  width: 200px;
-  height: 120px;
+  width: 150px;
+  height: 92.763px;
   object-fit: cover;
+  margin-left: 25px;
 }
 
 .welcometo {
   font-size: 75px;
+  font-weight: bolder;
   color:rgb(190, 190, 190);
 }
 
@@ -37,7 +39,9 @@
 .genre-Title {
   color:rgb(190, 190, 190);
   margin-top: 20px;
-  font-size: 36px;
+  font-size: 27px;
+  margin-left: 30px;
+  font-weight: 600;
 }
 
 .poststitle {
@@ -61,6 +65,7 @@
 .textarea {
   width: 450px;
   height: 100px;
+  color:rgb(190, 190, 190);
 }
 
 .postarea {

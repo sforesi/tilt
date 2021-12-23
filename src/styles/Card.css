@@ -7,7 +7,18 @@
   background: #12121b;
   border: 1px solid #292934;
   margin-top: 10px;
+  margin-bottom: 30px;
   border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.editcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card-header {
@@ -101,4 +112,20 @@
 .usertext {
   font-size: 25px;
 
+}
+
+.card-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.editsubmit {
+  width:400px;
+  height: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
 }

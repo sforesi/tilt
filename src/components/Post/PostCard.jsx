@@ -26,6 +26,13 @@ console.log(props.user)
   return (
     !edit ? 
     <div className="post-card">
+      <div className="card-header">
+        <PostActions 
+          {...props}
+          edit={edit}
+          setEdit={setEdit}
+        />
+      </div>
       <div className="post-container">
         <p className='usertext'>
           {props.post.thread}
@@ -40,8 +47,9 @@ console.log(props.user)
           edit={edit}
           setEdit={setEdit}
         />
-        <form onSubmit={handleSubmit}>
+        <form className='editcard' onSubmit={handleSubmit}>
         <textarea
+        className='editsubmit'
         type="text"
         name="thread"
         value={thread}
