@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition:transform 600ms;
+  transition:transform 800ms;
   position: relative;
 }
 
