@@ -9,7 +9,6 @@ function CollectionShow({ game }){
         <img src={game.image} alt='game' />
       </div>
     </div>
-
   )
 }
 

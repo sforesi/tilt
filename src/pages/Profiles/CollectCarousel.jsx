@@ -31,6 +31,7 @@ const responsive = {
 const CollectCarousel = ({games, title}) => {
   
   console.log("hi there are games", games)
+  console.log('test')
 
 return (
   
