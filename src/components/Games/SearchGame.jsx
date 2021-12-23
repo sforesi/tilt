@@ -34,7 +34,9 @@ import '../../styles/searchpage.css'
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
-          <input type="submit" value="Search Game" />
+          <input className='searchbtn' type="submit" value="Search Game" />
+        </form>
+        <div className='games'>
       {games.map((game)=>(
         <Link to={`/games/${game.id}`}key={game.id}>
           <SearchCard
@@ -42,7 +44,7 @@ import '../../styles/searchpage.css'
           />
         </Link>
       ))}
-        </form>
+      </div>
     </div>
   )
 }
