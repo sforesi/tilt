@@ -9,7 +9,6 @@ const NavBar = ({ user, handleLogout }) => {
       {user ?
         <nav className='navigation-bar'>
           <img id="logo"src="tilt.png" alt='logo'/>
-          <GamesSearch/>
           <Link to="/">HOME</Link>
           <Link to="/games">GAMES</Link>
           <Link to="/profile">COLLECTION</Link>

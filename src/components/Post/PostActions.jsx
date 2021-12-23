@@ -5,7 +5,6 @@ const PostActions = (props) => {
   const authorId = props.post.author?._id ? props.post.author._id : props.post.author
   const isAuthor = props.user?.profile === authorId
 
-    console.log(props)
     
   return (
 

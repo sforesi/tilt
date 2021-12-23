@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SearchCard from './SearchCard'
 import * as rawgService  from '../../services/rawgService'
+import '../../styles/searchpage.css'
+
+
 
   const GamesSearch= (props) => {
 
@@ -14,7 +17,6 @@ import * as rawgService  from '../../services/rawgService'
       try {
         const data = await rawgService.gameSearch(search)
         setGames(data.results)
-        console.log(data.results)
     } catch (error) {
       throw error
     }
@@ -23,7 +25,9 @@ import * as rawgService  from '../../services/rawgService'
   
   return (
     <div>
-    <form onSubmit={handleSubmit}>
+    <form 
+    className='search'
+    onSubmit={handleSubmit}>
           <input
             id="gameTitle"
             type="text"

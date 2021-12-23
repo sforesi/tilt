@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 function GameShow({ game }){
-console.log('gammemememememememe', game)
+  
 const [hover, setHover] = useState(false)
 
   return (

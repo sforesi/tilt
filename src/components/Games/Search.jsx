@@ -19,7 +19,6 @@ import * as rawgService  from '../../services/rawgService'
     searchGame()
   }, [] ) 
   const searchGame = async (e) => {
-
     e.preventDefault()
       try {
         const data = await rawgService.gamesGenre(e.target.value)

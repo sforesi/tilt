@@ -10,7 +10,6 @@ const Profile = () => {
     profileService.getProfileById()
     .then(profile => setProfile(profile))
   }, [])
-console.log("!!!",profile)
   return (
     <div className='collection-container'>
       <main>
