@@ -40,7 +40,6 @@ const show = async (req, res) => {
       return res.status(201).json(gameData)
     
     } else {
-      console.log(response.data)
       req.body.rawgId = req.params.id
       req.body.image = response.data.background_image
       req.body.name = response.data.name
