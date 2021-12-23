@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import * as reviewService from '../../../services/reviewService'
+import '../../../styles/DisplayInfo.css'
 
 
 
@@ -19,8 +20,8 @@ const handleSubmit = async(e) => {
   return ( 
     <form onSubmit={handleSubmit}>
       <input type="text" name="content" value={content} onChange={(e) => setContent(e.target.value)}/>
-      <button type="submit">
-        save review
+      <button className="submit" type="submit">
+        save
       </button>
     </form>
   )
