@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SearchCard from './SearchCard'
 import * as rawgService  from '../../services/rawgService'
@@ -6,7 +6,18 @@ import * as rawgService  from '../../services/rawgService'
   const Games= () => {
 
   const [games, setGames]= useState([])
+  useEffect(()=>{
+    const searchGame = async () => {
 
+        try {
+          const data = await rawgService.gamesGenre('action')
+          setGames(data.results)
+      } catch (error) {
+        throw error
+      }
+    } 
+    searchGame()
+  }, [] ) 
   const searchGame = async (e) => {
 
     e.preventDefault()
@@ -23,7 +34,7 @@ import * as rawgService  from '../../services/rawgService'
       <div className='drop-down'>
     <select name="games" onChange={searchGame}>
       <option value="shooter">select genre</option>
-      <option value="action">action</option>
+      <option selected value="action">action</option>
       <option value="strategy">strategy</option>
       <option value="role-playing-games-rpg">shooter</option>
       <option value="board-games">board-games</option>
