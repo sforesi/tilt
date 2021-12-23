@@ -5,6 +5,9 @@ import Reviews from "./Reviews/Reviews"
 
 const DisplayInfo = (props) => {
   console.log(props.game);
+  const gameDescription = props.game.rawg.description_raw.split('.').slice(0,3).join('.').concat('.')
+  const gameYear = props.game.rawg.released.split('-').slice(0,1)
+  console.log(gameYear)
   return (
     <div className="display-info">
       <div className="container-2">
@@ -33,9 +36,9 @@ const DisplayInfo = (props) => {
           <div className="right-column">
             <div className="header">
               <p className="title">{props.game.rawg.name}</p>
-              <p>{props.game.rawg.released}</p>
+              <p>{gameYear}</p>
             </div>
-            <p className="description">{props.game.rawg.description_raw}</p>
+            <p className="description">{gameDescription}</p>
             <CollectionButtons
             game={props.game}
             />
