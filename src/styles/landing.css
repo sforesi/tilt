@@ -4,18 +4,89 @@
   flex-direction: column;
 }
 
+.banner-img {
+  width: 150px;
+  height: 92.763px;
+  object-fit: cover;
+  margin-left: 25px;
+}
+
+.welcometo {
+  font-size: 75px;
+  font-weight: bolder;
+  color:rgb(190, 190, 190);
+}
+
+.welcome {
+  text-align: center;
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  text-align: center;
+  color:rgb(190, 190, 190);
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.placefor {
+  font-size: 24px;
+}
+
 .genre-Title {
   color:rgb(190, 190, 190);
   margin-top: 20px;
-  font-size: 36px;
+  font-size: 27px;
+  margin-left: 30px;
+  font-weight: 600;
 }
 
 .poststitle {
   color:rgb(190, 190, 190);
   margin-top: 75px ;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
 }
 
 .main-content {
-  margin-top: 150px;
+  margin-top: 75px;
+}
+
+.subtitle-banner {
+  font-size: 30px;
+  color:rgb(190, 190, 190);
+  text-align: center;
+}
+
+.textarea {
+  width: 450px;
+  height: 100px;
+  color:rgb(190, 190, 190);
+}
+
+.postarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.post-card {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.usertext {
+  font-size: 25px;
+}
+
+.postbutton {
+  margin-top: 15px;
 }
 

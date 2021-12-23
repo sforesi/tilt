@@ -43,6 +43,7 @@ const PostList = (props) => {
   return (
     <div className="layout">
       <h1 className='poststitle'>Posts</h1>
+      <h3 className='subtitle'>Share your thoughts</h3>
       <CreatePost
       user={props.user}
       posts={posts}

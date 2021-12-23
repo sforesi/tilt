@@ -34,7 +34,7 @@ console.log(props.user)
         />
       </div>
       <div className="post-container">
-        <p>
+        <p className='usertext'>
           {props.post.thread}
         </p>
       </div>
@@ -47,8 +47,9 @@ console.log(props.user)
           edit={edit}
           setEdit={setEdit}
         />
-        <form onSubmit={handleSubmit}>
+        <form className='editcard' onSubmit={handleSubmit}>
         <textarea
+        className='editsubmit'
         type="text"
         name="thread"
         value={thread}
