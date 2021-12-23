@@ -26,15 +26,8 @@ console.log(props.user)
   return (
     !edit ? 
     <div className="post-card">
-      <div className="card-header">
-        <PostActions 
-          {...props}
-          edit={edit}
-          setEdit={setEdit}
-        />
-      </div>
       <div className="post-container">
-        <p>
+        <p className='usertext'>
           {props.post.thread}
         </p>
       </div>

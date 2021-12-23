@@ -6,15 +6,18 @@ const PostForm = (props) => {
     <form className="create-form" onSubmit={props.handleCreatePost}>
       <div className="post-prompt">
       </div>
+      <div className='postarea'>
       <textarea
         required 
+        className='textarea'
         name="thread"
         autoComplete='off'
-        placeholder='post'
+        placeholder='whats on your mind?'
         value={props.postForm.thread}
         onChange={(e) => props.handleChange(e)}
         />
-      <button type="submit">Save</button>
+      <button type="submit" className='postbutton'>Post</button>
+      </div>
     </form>
     
 

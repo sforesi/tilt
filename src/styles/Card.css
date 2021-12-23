@@ -20,7 +20,7 @@
   width: 100%;
   display: flex;
   align-items: flex-start;
-  padding: 15px 0px 6px 13px;
+  margin: 10px 15px;
 }
 
 .post-container p {
@@ -28,8 +28,10 @@
   margin: 0;
   text-align: left;
   line-height: 1.4;
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(200, 200, 200);
+  word-break: break-all; 
+  word-wrap: break-word
 }
 
 .code-container {
@@ -95,4 +97,8 @@
 
 .comment-link a {
   text-decoration: none;
+}
+.usertext {
+  font-size: 25px;
+
 }
