@@ -136,22 +136,23 @@ body{
   font-size: 12px;
   font-weight: bold;
   margin-top: 10px;
+  width: 228px;
 }
 
 .collection-buttons{
-
+  
 }
 
 .collection-buttons img{
   display: flex;
   height: 20px;
   width: 30px;
-  
+  filter: invert(1)
 }
 
 .collection-buttons button{
   background: rgb(53, 50, 50);
-  border: 0;
+  border: 1px solid rgb(155, 155, 155);
   margin: 0 5px 0 5px;
   box-shadow: 0px 5px 15px 0px #000000;
   border-radius: 5px;
