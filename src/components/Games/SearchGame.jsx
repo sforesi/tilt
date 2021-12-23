@@ -34,7 +34,7 @@ import '../../styles/searchpage.css'
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
-          <input className='searchbtn' type="submit" value="Search Game" />
+          <input className='searchbtn' type="submit" value="Search" />
         </form>
         <div className='games'>
       {games.map((game)=>(
