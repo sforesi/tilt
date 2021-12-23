@@ -1,0 +1,19 @@
+.collect {
+  color:rgb(190, 190, 190);
+  margin-top: 20px;
+  font-size: 27px;
+  margin-left: 30px;
+  font-weight: 600;
+}
+
+.collect-title {
+  color:rgb(190, 190, 190);
+  font-size: 42px;
+  font-weight: 600;
+  height: 120px;
+  background-color: #1d212a;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

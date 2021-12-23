@@ -33,7 +33,7 @@ const CollectCarousel = ({games, title}) => {
 return (
   
   <div className='keraselContainer'>
-    <h1>{title}</h1>
+    <h1 className='collect'>{title}</h1>
     <Carousel 
     ssr
     partialVisible

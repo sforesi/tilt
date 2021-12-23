@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import SearchCard from './SearchCard'
 import * as gameService from '../../services/gameService'
 import { addToCollection } from '../../services/gameService'
+import '../../styles/collections.css'
 
   const Collections = () => {
 
