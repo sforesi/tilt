@@ -1,5 +1,5 @@
 # T I L T
-tilt is a social netwrok for gamers, meant to provide a way to archive your collection of games across genres platforms and decades. Tilt allows you to search through a games pages, or for  a specific title as well as add any game to a collection whether it be favorite, played or a wishlist.
+tilt is a social network for gamers, meant to provide a way to archive your collection of games across genres, platforms and decades. tilt allows you to search and sort through games, as well as add any game to a collection whether it be favorited, played or a wishlisted.
 
 [t i l t](https://tilt-games.herokuapp.com)
 
