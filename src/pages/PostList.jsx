@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getAllPosts,updatePost, deletePost } from '../services/postService'
+import '../styles/landing.css'
 
 // Components
 import PostCard from '../components/Post/PostCard'
@@ -41,7 +42,7 @@ const PostList = (props) => {
   console.log(props.user)
   return (
     <div className="layout">
-      <h1>Posts</h1>
+      <h1 className='poststitle'>Posts</h1>
       <CreatePost
       user={props.user}
       posts={posts}
