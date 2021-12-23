@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getAllPosts,updatePost, deletePost } from '../services/postService'
+import { getAllPosts, deletePost } from '../services/postService'
 import '../styles/landing.css'
 
 // Components

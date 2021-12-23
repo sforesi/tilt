@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './signup.css'
 import * as authService from '../../services/authService'
 
 
-import tilt from './images/tilt.png'
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -36,9 +34,7 @@ const SignupForm = props => {
 
   const { name, email, password, passwordConf } = formData
 
-  const isFormInvalid = () => {
-    return !(name && email && password && password === passwordConf)
-  }
+
 
 
 

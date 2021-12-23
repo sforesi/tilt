@@ -1,11 +1,9 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import SignupForm from '../../components/SignupForm/SignupForm'
 
 
 const Signup = props => {
   const [message, setMessage] = useState([''])
-  const navigate = useNavigate()
 
   const updateMessage = msg => {
     setMessage(msg)

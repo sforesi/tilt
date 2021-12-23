@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router'
 // Components
 import PostForm from './PostForm'
 
@@ -7,7 +6,7 @@ import PostForm from './PostForm'
 import { createPost } from '../../services/postService.js'
 
 const CreatePost = (props) => {
-  const navigate = useNavigate()
+
   const [postForm, setPostForm] = useState({
     thread: "",
     author: props.user?.profile,

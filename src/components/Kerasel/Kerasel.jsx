@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../styles/kerasel.css"
-import PostList from '../../pages/PostList';
 
 
 const responsive = {

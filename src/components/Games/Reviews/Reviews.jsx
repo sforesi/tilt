@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import ReviewCard from "./ReviewCard";
 import CreateReview from "./CreateReview";
-import * as reviewService from '../../../services/reviewService'
 import '../../../styles/DisplayInfo.css'
 
 
